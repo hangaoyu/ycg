@@ -1,0 +1,193 @@
+
+.project {
+  //background-color: #fafafa;
+}
+
+.project-banner {
+  margin-top: 160px;
+  width: 100%;
+}
+
+.project-desrc {
+  position: relative;
+  z-index: 1;
+  width: 1200px;
+  margin: 0px auto;
+  .project-container {
+    box-shadow: 1px 1px 3px #e8e6e6;
+    background-color: white;
+
+    position: absolute;
+    z-index: 10;
+    top: -38px;
+    width: 1200px;
+    height: 328px;
+    img {
+      margin: 28px 518px;
+    }
+    p {
+      font-size: 14px;
+      color: #666666;
+      margin: 0 20px;
+      text-indent: 2em;
+      font-family: "微软雅黑";
+    }
+  }
+
+}
+
+.project-type {
+
+  box-shadow: 3px 3px 3px 3px #e8e6e6;
+
+  height: 60px;
+  width: 1200px;
+  margin: 328px auto 1100px;
+  position: relative;
+  ul {
+    margin-left: -40px;
+    display: flex;
+    height: 60px;
+    li {
+      line-height: 60px;
+      text-align: center;
+      width: 400px;
+      font-size: 16px;
+      color: #333333;
+      list-style-type: none;
+      .p-line {
+        width: 0px;
+        height: 4px;
+
+        background-color: #00b3ee;
+        margin: -5px auto 0;
+        transition: all 0.7s;
+        -moz-transition: all 0.7s; /* Firefox 4 */
+        -webkit-transition: all 0.7s; /* Safari and Chrome */
+        -o-transition: all 0.7s;
+      }
+      &:hover {
+        .p-line{
+          width: 150px;
+        }
+      }
+    }
+    .p-li-active {
+      color: white;
+      transition: all 0.7s;
+      -moz-transition: all 0.7s; /* Firefox 4 */
+      -webkit-transition: all 0.7s; /* Safari and Chrome */
+      -o-transition: all 0.7s;
+      background-color: purple;
+    }
+
+  }
+  .type-container {
+
+    position: absolute;
+    top: 100px;
+    width: 1200px;
+    height: 900px;
+    box-shadow: 0px 0px 7px #e8e6e6;
+    overflow: hidden;
+    .p-company {
+      transition: all 1s;
+      -moz-transition: all 1s; /* Firefox 4 */
+      -webkit-transition: all 1s; /* Safari and Chrome */
+      -o-transition: all 1s;
+      position: absolute;
+      width: 1200px;
+
+      left: 0px;
+      .company-items {
+        .company-item {
+          //height: 60px;
+          margin-left: 216px;
+          //margin-bottom: 44px;
+
+          h5 {
+            float: left;
+            font-size: 16px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            color: #333333;
+          }
+          h4 {
+            box-shadow: 0px 0px 5px #e8e6e6;
+            margin-left: 40px;
+            padding-left: 42px;
+            width: 635px;
+            height: 60px;
+            overflow: hidden;
+            line-height: 60px;
+            font-size: 16px;
+            text-align: center;
+            float: left;
+            span {
+              color: #8540b4;
+            }
+          }
+        }
+      }
+    }
+    .p-business {
+      transition: all 1s;
+      -moz-transition: all 1s; /* Firefox 4 */
+      -webkit-transition: all 1s; /* Safari and Chrome */
+      -o-transition: all 1s;
+      width: 1200px;
+      position: absolute;
+      left: 1200px;
+
+      .business-container {
+        width: 800px;
+        margin-left: 400px;
+        h4 {
+          font-size: 16px;
+          span {
+            float: left;
+
+            width: 200px;
+          }
+          p {
+
+            text-align: left;
+            float: left;
+            width: 400px;
+          }
+        }
+      }
+
+    }
+    .p-process {
+      transition: all 1s;
+      -moz-transition: all 1s; /* Firefox 4 */
+      -webkit-transition: all 1s; /* Safari and Chrome */
+      -o-transition: all 1s;
+      position: absolute;
+      left: 2400px;
+      width: 1200px;
+      .process-table {
+        width: 800px;
+        margin: 0 auto;
+        box-shadow: 0px 0px 7px #e8e6e6;
+        th, td {
+          font-size: 16px;
+          text-align: center;
+          width: 200px;
+          height: 50px;
+          line-height: 50px;
+          vertical-align: bottom;
+          border-bottom: 1px solid #e8e6e6;
+
+        }
+        th {
+          background-color: #8540b4;
+          color: white;
+        }
+      }
+
+    }
+  }
+}

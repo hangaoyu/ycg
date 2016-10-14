@@ -1,0 +1,267 @@
+$pcolor: #5B2580;
+$f-color-1: #333333;
+$f-color-2: #666666;
+.activity-detail-banner {
+  width: 100%;
+  margin-top: 160px;
+  img {
+    width: 100%;
+  }
+}
+
+.activity-stage {
+  width: 1250px;
+  margin: 0 auto;
+}
+
+.active-apply {
+  width: 1250px;
+  margin: 0 auto 100px;
+  height: 500px;
+
+  .active-apply-container {
+
+    width: 350px;
+    margin: 0 auto;
+    .form-item {
+      margin-bottom: 20px;
+      label {
+        line-height: 30px;
+        height: 30px;
+        width: 100px;
+        float: left;
+      }
+      input {
+        height: 30px;
+        width: 250px;
+        float: left;
+      }
+      br {
+        clear: left;
+      }
+      #sbutton {
+        width: 300px;
+        height: 45px;
+        font-size: 17px;
+        text-align: center;
+        line-height: 45px;
+        margin-left: 40px;
+        background-color: purple;
+        color: white;
+      }
+    }
+
+  }
+}
+
+.activity-desrc {
+  width: 1200px;
+  margin: 0 auto 100px;
+  height: 800px;
+  .activity-desrc-banner {
+    p {
+      margin-top: 40px;
+      font-size: 17px;
+      text-align: left;
+      text-indent: 2em;
+    }
+  }
+
+}
+
+.active-contact {
+  width: 1250px;
+  margin: 0 auto 110px;
+  height: 550px;
+  .contact-social {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .social-item {
+
+      width: 125px;
+      img {
+        margin-left: 25px;
+      }
+    }
+  }
+  .contact-desr {
+    width: 300px;
+    margin: 60px auto;
+  }
+
+}
+
+.active-message {
+  width: 1200px;
+  margin: 0 auto;
+  .join-message {
+
+    h1 {
+      margin-bottom: 36px;
+      font-size: 20px;
+      font-weight: 100;
+      text-align: center;
+      span {
+        color: #999999;
+      }
+    }
+    #join-message-text {
+
+      border: none;
+      width: 1200px;
+      height: 200px;
+      background-color: #fafafa;
+      margin: 0 auto 58px;
+    }
+    .join-sub-button {
+      width: 284px;
+      height: 58px;
+      margin: 0 auto 106px;
+      color: white;
+      text-align: center;
+      line-height: 58px;
+      font-size: 20px;
+    }
+  }
+}
+
+.active-apply-bk {
+  background-color: #f9f9f9;
+  height: 600px;
+}
+
+.active-training-container {
+  width: 1200px;
+  margin: 0 auto 100px;
+}
+
+.active-guest {
+  width: 1200px;
+  margin: 0 auto;
+  .active-guest-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .active-guest-item {
+      box-shadow: 1px 1px 1px 1px #e8e6e6;
+      border-radius: 5px;
+      position: relative;
+      width: 240px;
+      height: 300px;
+      margin-right: 60px;
+      margin-bottom: 68px;
+      overflow: hidden;
+      .active-guest-line {
+        transition: all 0.5s;
+        -moz-transition: all 0.5s; /* Firefox 4 */
+        -webkit-transition: all 0.5s; /* Safari and Chrome */
+        -o-transition: all 0.5s;
+        width: 0px;
+        margin-left: 120px;
+        height: 3px;
+        background-color: #2a88bd;
+        position: absolute;
+        top: 240px;
+        z-index: 3;
+      }
+      .active-guest-name {
+        position: absolute;
+        top: 240px;
+        width: 240px;
+        height: 60px;
+        background-color: white;
+        z-index: 2;
+        text-align: center;
+        h4 {
+
+        }
+        h5 {
+
+        }
+      }
+
+      p {
+        position: absolute;
+        background-color: white;
+        opacity: 0.97;
+        z-index: 1;
+        bottom: 0;
+        width: 240px;
+        height: 180px;
+        overflow: hidden;
+        transition: all 0.5s;
+        -moz-transition: all 0.5s; /* Firefox 4 */
+        -webkit-transition: all 0.5s; /* Safari and Chrome */
+        -o-transition: all 0.5s;
+        top: 240px;
+        text-align: left;
+        text-indent: 2em;
+      }
+      &:hover {
+        p {
+          top: 60px;
+
+        }
+        .active-guest-line {
+          width: 240px;
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+}
+
+.activity-planning {
+  width: 1200px;
+  margin: 0 auto 150px;
+  .activity-planning-text {
+    text-align: center;
+  }
+}
+
+.active-hospital-intro {
+  width: 1200px;
+  margin: 0 auto 150px;
+  .people {
+    box-shadow: 24px 24px 24px #e8e6e6;
+    width: 240px;
+    margin: 0 auto 82px;
+  }
+  .text-container {
+    font-size: 17px;
+  }
+}
+
+.active-hospital-unit {
+  width: 1200px;
+  margin: 0 auto 150px;
+  .logo {
+    width: 920px;
+    margin: 0 auto;
+    h3 {
+      width: 400px;
+      margin: 0 auto 50px;
+      text-align: center;
+      color: #8540b4;
+      font-size: 18px;
+    }
+    .main-logo {
+      display: flex;;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 100px;
+
+      img {
+        width: 160px;
+        margin-right: 70px;
+      }
+
+    }
+  }
+
+}

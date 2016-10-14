@@ -1,0 +1,200 @@
+.about-banner {
+
+  width: 1400px;
+  margin: 160px auto 174px;
+
+  img {
+
+  }
+}
+
+.about-desrc {
+  background-color: #f9f9f9;
+  height: 800px;
+  width: 1090px;
+  margin: 0 auto;
+  position: relative;
+  #about-ycg {
+    z-index: 1;
+    display: inline-block;
+
+    padding-top: 68px;
+
+  }
+  #about-yisheng {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    left: 690px;
+    top: -150px;
+
+  }
+  #about-bt1 {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    top: 100px;
+  }
+  #about-bt2 {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    top: 350px;
+    z-index: 11;
+  }
+  #about-detail {
+    z-index: 10;
+    opacity: 0;
+    transition: 1s;
+    background-color: white;
+    width: 854px;
+    height: 454px;
+    border: 6px solid purple;
+    box-shadow: 0 0 3px purple;
+    position: absolute;
+    left: 290px;
+    top: 230px;
+    padding: 34px 70px 34px 130px;
+  }
+}
+
+.about-health {
+  height: 1058px;
+  width: 1090px;
+  margin: 0 auto;
+
+  position: relative;
+  #about-ycg-right {
+    z-index: 1;
+    position: absolute;
+    left: 280px;
+
+    top: 200px;
+
+  }
+
+  #about-bt3 {
+    z-index: 2;
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    left: 920px;
+    top: 360px;
+  }
+  #about-bt4 {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    left: 710px;
+    top: 550px;
+    z-index: 11;
+  }
+  #about-women {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    z-index: 12;
+    left: 100px;
+    top: 150px;
+
+  }
+  #about-health-detail {
+    z-index: 10;
+    opacity: 0;
+    transition: 1s;
+    background-color: white;
+    width: 694px;
+    height: 466px;
+    border: 6px solid purple;
+    box-shadow: 0 0 3px purple;
+    position: absolute;
+
+    top: 480px;
+    padding: 34px 70px 34px 130px;
+  }
+}
+
+.about-event {
+  position: relative;
+  height: 980px;
+  width: 1090px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  #about-bt5 {
+    z-index: 2;
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    top: 136px;
+  }
+  #about-bt6 {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    left: 920px;
+    top: 206px;
+    z-index: 11;
+  }
+  .event-container {
+
+    padding-top: 380px;
+    position: relative;
+    #about-line {
+      position: absolute;
+      opacity: 0;
+      transition: 1s;
+      left: 50%;
+    }
+    .event-left {
+      opacity: 0;
+      transition: 2s;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 3px #e8e6e6;
+      width: 500px;
+
+      img {
+        float: right;
+        width: 230px;
+        height: 160px;
+
+      }
+      span {
+        text-align: right;
+        margin-right: 20px;
+        width: 200px;
+        float: right;
+      }
+      p {
+        text-align: right;
+        margin-right: 20px;
+        width: 250px;
+        float: right;
+      }
+    }
+    .event-right {
+      opacity: 0;
+      transition: 2s;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 3px #e8e6e6;
+      width: 500px;
+      margin-left: 600px;
+      img {
+        float: left;
+        width: 230px;
+        height: 160px;
+      }
+      span {
+        margin-left: 20px;
+        width: 200px;
+        float: left;
+      }
+      p {
+        margin-left: 20px;
+        width: 250px;
+        float: left;
+      }
+    }
+  }
+}

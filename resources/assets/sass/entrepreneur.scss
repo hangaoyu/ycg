@@ -1,0 +1,217 @@
+.entrepreneur-banner {
+  width: 100%;
+  margin-top: 160px;
+  height: 60%;
+  //height: 662px;
+  position: relative;
+  img {
+    width: 100%;
+    height: 70%;
+  }
+
+  .entrepreneur-banner-word {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+
+    top: 15%;
+    left: 20%;
+    color: white;
+    h1 {
+      font-size: 44px;
+    }
+    h2 {
+      font-size: 50px;
+    }
+    h3 {
+      font-size: 16px;
+      color: #ff5bf9;
+    }
+    h4 {
+      font-size: 18px
+    }
+    .banner-button {
+      margin-top: 1%;
+      width: 160px;
+      height: 50px;
+      background-color: #f8d518;
+      border-radius: 10px;
+
+      text-align: center;
+      line-height: 50px;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.entrepreneur-process {
+  width: 1200px;
+  margin: 20px auto;
+  .process-desrc {
+    width: 926px;
+    margin: 0 auto;
+
+  }
+  .process-word {
+    width: 1200px;
+    margin: 26px 0px 138px 170px;
+    display: block;
+
+    .process-word-item {
+      margin-right: 190px;
+      text-align: center;
+      display: inline-block;
+      h3 {
+        color: #6b3a8c;
+      }
+      h4 {
+        color: #999999;
+      }
+      h5 {
+        color: #999999;
+      }
+    }
+  }
+
+  .process-category {
+    $bkcolor: #9eaebe #717e8b #1f78d9 #18396d;
+    $hbkcolor: #96A6B6 #717e82 #1f5689 #181462;
+
+    color: white;
+    @for $i from 1 through 4 {
+      .category-item-#{$i} {
+        display: inline-block;
+        width: 242px;
+
+        transition: all 1s;
+        -moz-transition: all 0.5s; /* Firefox 4 */
+        -webkit-transition: all 0.5s; /* Safari and Chrome */
+        -o-transition: all 0.5s;
+
+        background-color: nth($bkcolor, $i);
+        margin-left: 40px;
+        &:hover {
+          background-color: nth($hbkcolor, $i);
+        }
+      }
+    }
+    #category-icon {
+      margin: 38px 45px 24px;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    h5 {
+      margin-bottom: 42px;
+      text-align: center;
+    }
+    ul {
+      margin: 0 auto;
+      li {
+      }
+    }
+    #category-button {
+      border: 4px solid white;
+      margin: 46px 46px 32px;
+      width: 150px;
+      height: 46px;
+      text-align: center;
+      a {
+
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.entrepreneur-apply-block {
+  background-color: #f9f9f9;
+  margin: 20px 0;
+  .entrepreneur-apply {
+    width: 1200px;
+    margin: 100px auto;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    .entrepreneur-apply-word {
+      hr {
+        width: 80px;
+        margin: 0 auto;
+        height: 2px;
+        background-color: purple;
+
+      }
+      h3 {
+        margin: 66px 0 28px;
+        text-align: center;
+      }
+      p {
+        //margin-top: 20px;
+        text-align: center;
+        font-size: 16px;
+        color: #999999;
+      }
+    }
+    .entrepreneur-apply-process {
+      margin-top: 104px;
+
+      .entrepreneur-apply-item {
+        margin: 0 38px 94px;
+        width: 220px;
+        height: 280px;
+        display: inline-block;
+        text-align: center;
+        h4 {
+          font-size: 20px;
+          color: #7a1183;
+        }
+        h5 {
+          font-size: 14px;
+          color: #666666;
+        }
+      }
+
+      .apply-button {
+        width: 284px;
+        height: 58px;
+        margin: 0 auto 94px;
+        text-align: center;
+        line-height: 54px;
+        a {
+          text-decoration: none;
+          font-size: 20px;
+          color: white;
+        }
+
+      }
+    }
+  }
+}
+
+.entrepreneur-service {
+  width: 1220px;
+  margin: 0px auto 240px;
+
+  .entrepreneur-service-item {
+
+    margin: 0 97px 84px;
+    width: 210px;
+    height: 280px;
+    display: inline-block;
+    text-align: center;
+    h4 {
+      font-size: 20px;
+      color: #7a1183;
+    }
+    h5 {
+      font-size: 14px;
+      color: #666666;
+    }
+
+  }
+}

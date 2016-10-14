@@ -1,0 +1,161 @@
+$pcolor: #5B2580;
+$f-color-1: #333333;
+$f-color-2: #666666;
+.activity-banner {
+  width: 100%;
+  margin-top: 160px;
+  img {
+    width: 100%;
+  }
+}
+
+.activity-choice {
+  width: 1250px;
+  height: 1400px;
+  margin: 0 auto;
+  .activity-choice-nav {
+    position: relative;
+
+    ul {
+      display: flex;
+      margin-left: 240px;
+      li {
+
+        transition: all 1s;
+        -moz-transition: all 0.5s; /* Firefox 4 */
+        -webkit-transition: all 0.5s; /* Safari and Chrome */
+        -o-transition: all 0.5s;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 16px;
+        margin-right: 60px;
+        list-style: none;
+        a {
+          color: $f-color-1;
+          text-decoration: none;
+        }
+        &:hover {
+          background-color: $pcolor;
+
+          color: white;
+
+        }
+
+      }
+      .search {
+        border-radius: 30px;
+        overflow: hidden;
+        height: 45px;
+        width: 275px;
+        position: relative;
+        img {
+          margin-left: 5px;
+          width: 16px;
+          display: inline-block;
+        }
+        .search-input {
+          display: inline-block;
+          input {
+            border: none;
+            color: black;
+            position: absolute;
+            left: 60px;
+            width: 100px;
+            background-color: #00b3ee;
+
+          }
+          input:focus {
+            outline: none;
+          }
+          .serach-btn{
+            display: inline-block;
+          width: 20px;
+          }
+
+        }
+
+        &:hover {
+          background-color: white;
+          color: white;
+
+        }
+      }
+    }
+  }
+  .activity-choice-items {
+
+    .activity-choice-item {
+      a{
+        text-decoration: none;
+      }
+      //padding: 2%;
+      box-shadow: 0 0 3px #e8e6e6;
+      border: 1px solid #e8e6e6;
+      width: 280px;
+      height: 310px;
+      display: inline-block;
+      margin: 50px 14px 0px;
+      .item-pic {
+        overflow: hidden;
+        width: 280px;
+        height: 230px;
+        img {
+          transition: all 1s;
+          -moz-transition: all 1s; /* Firefox 4 */
+          -webkit-transition: all 1s; /* Safari and Chrome */
+          -o-transition: all 1s;
+          width: 280px;
+          height: 230px;
+
+        }
+      }
+      h3 {
+        font-family: "微软雅黑";
+        margin-top: 12px;
+        text-align: center;
+        font-size: 16px;
+        color: $f-color-1;
+        margin-bottom: 10px;
+        font-weight: 100;
+
+      }
+      .item-line {
+        transition: all 1s;
+        -moz-transition: all 1s; /* Firefox 4 */
+        -webkit-transition: all 1s; /* Safari and Chrome */
+        -o-transition: all 1s;
+        background-color: #00b3ee;
+        width: 0%;
+        margin: 0 auto;
+        height: 3px;
+      }
+      h4 {
+        font-family: "微软雅黑";
+        text-align: center;
+        font-size: 12px;
+        color: $f-color-2;
+        span {
+          margin-left: 40px;
+        }
+      }
+
+      transition: all 0.5s;
+      -moz-transition: all 0.5s; /* Firefox 4 */
+      -webkit-transition: all 0.5s; /* Safari and Chrome */
+      -o-transition: all 0.5s;
+      &:hover {
+        .item-pic {
+          img {
+            -webkit-transform: scale(1.1, 1.1);
+            -moz-transform: scale(1.1, 1.1);
+            -transform: scale(1.1, 1.1);
+          }
+        }
+        .item-line {
+          width: 30%;
+        }
+        box-shadow: 3px 3px 3px #e8e6e6;
+      }
+    }
+  }
+}

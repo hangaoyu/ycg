@@ -1,0 +1,95 @@
+$pcolor: #5B2580;
+.join-banner {
+  margin-top: 160px;
+  img {
+    width: 100%;
+
+  }
+}
+
+.join-us {
+
+  width: 1200px;
+
+  margin: 50px auto 0px;
+  .join-jobs {
+    display: inline-block;
+    width: 700px;
+    p {
+      height: 200px;
+    }
+  }
+  .join-jobs-nav {
+    float: right;
+    margin-left: 100px;
+    width: 230px;
+    //display: inline-block;
+    ul {
+
+      li {
+        color: white;
+        list-style: none;
+        margin-bottom: 6px;
+        padding: 5px 28px;
+
+      }
+      #join-nav-first {
+        background-color: #0d3625;
+      }
+      #join-nav-second {
+        background-color: $pcolor;
+      }
+      .join-nav-other {
+        background-color: lightgray;
+      }
+    }
+
+  }
+}
+
+.join-contact {
+  width: 1200px;
+  margin: 0 auto;
+  .join-map {
+    ul {
+      margin-top: 70px;
+      display: flex;
+      li {
+        list-style: none;
+        margin-right: 70px;
+        color: #999999;
+        font-size: 16px;
+      }
+
+    }
+  }
+  .join-message {
+    margin-top: 58px;
+    h1 {
+      margin-bottom: 36px;
+      font-size: 20px;
+      font-weight: 100;
+      text-align: center;
+      span {
+        color: #999999;
+      }
+    }
+    #join-message-text {
+
+      border: none;
+      width: 1200px;
+      height: 200px;
+      background-color: #fafafa;
+      margin: 0 auto 58px;
+    }
+    .join-sub-button {
+      width: 284px;
+      height: 58px;
+      margin: 0 auto 106px;
+      color: white;
+      text-align: center;
+      line-height: 58px;
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,853 @@
+
+body {
+  background-color: white;
+
+}
+
+//modal padding-right抖动
+body.modal-open {
+  overflow: auto;
+}
+
+body.modal-open[style] {
+  padding-right: 0px !important;
+}
+
+.modal::-webkit-scrollbar {
+  width: 0 !important; /*removes the scrollbar but still scrollable*/
+  /* reference: http://stackoverflow.com/a/26500272/2259400 */
+}
+
+.modal-open {
+  overflow: initial !important;
+}
+
+.modal-content {
+  #modal-btn-close{
+    position: absolute ;
+    top:  -32px;
+    right: -32px;
+  }
+  border-radius: 8px;
+  width: 850px;
+  height: 500px;
+  margin-top: 200px;
+  .modal-img {
+    position: relative;
+    float: left;
+    width: 480px;
+    height: 500px;
+    #modal-pic{
+      z-index: 9999;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    #modal-pic-word {
+      z-index: 9999;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+  }
+  .modal-right {
+    float: left;
+    position: relative;
+
+    height: 500px;
+    background-color: transparent;
+    .modal-sign {
+      position: relative;
+
+      height: 60px;
+      width: 240px;
+      margin-left: 65px;
+      margin-top: 56px;
+      .sign-in {
+        float: left;
+        text-align: center;
+        font-size: 20px;
+        width: 120px;
+
+      }
+      .sign-up {
+        font-size: 20px;
+        float: left;
+        text-align: center;
+        width: 120px;
+
+      }
+      .sign-line {
+        position: absolute;
+        transition: all 0.5s;
+        -moz-transition: all 0.5s; /* Firefox 4 */
+        -webkit-transition: all 0.5s; /* Safari and Chrome */
+        -o-transition: all 0.5s;
+        width: 80px;
+        height: 3px;
+        left: 20px;
+        top: 27px;
+        background-color: rebeccapurple;
+      }
+    }
+
+    .modal-signin-container {
+
+      transition: all 0.5s;
+      -moz-transition: all 0.5s; /* Firefox 4 */
+      -webkit-transition: all 0.5s; /* Safari and Chrome */
+      -o-transition: all 0.5s;
+      position: absolute;
+      z-index: 999;
+      left: 0px;
+      opacity: 1;
+      bottom: 150px;
+      width: 370px;
+      height: 240px;
+      .sigin-item {
+        margin-left: 45px;
+        input {
+          width: 280px;
+          border: none;
+          color: black;
+        }
+        input:focus {
+          //outline: none;
+        }
+        .sign-line {
+          transition: all 0.5s;
+          -moz-transition: all 0.5s; /* Firefox 4 */
+          -webkit-transition: all 0.5s; /* Safari and Chrome */
+          -o-transition: all 0.5s;
+          width: 280px;
+          height: 2px;
+          margin-top: 7px;
+          background-color: black;
+        }
+        .sigin-btn {
+          text-align: center;
+          margin-top: 38px;
+          width: 280px;
+          height: 50px;
+          background-color: #3bb474;
+          color: white;
+          font-size: 18px;
+          line-height: 50px;
+        }
+
+      }
+    }
+
+   .modal-signup-container{
+     transition: all 0.5s;
+     -moz-transition: all 0.5s; /* Firefox 4 */
+     -webkit-transition: all 0.5s; /* Safari and Chrome */
+     -o-transition: all 0.5s;
+     position: absolute;
+     z-index: 998;
+     opacity: 0;
+     left:0;
+     bottom: 150px;
+     width: 370px;
+     height: 240px;
+     .sigin-item {
+       margin-left: 45px;
+       input {
+         width: 280px;
+         border: none;
+         color: black;
+       }
+       input:focus {
+         //outline: none;
+       }
+       .sign-line {
+         transition: all 0.5s;
+         -moz-transition: all 0.5s; /* Firefox 4 */
+         -webkit-transition: all 0.5s; /* Safari and Chrome */
+         -o-transition: all 0.5s;
+         width: 280px;
+         height: 2px;
+         margin-top: 7px;
+         background-color: black;
+       }
+
+       .siginup-btn{
+         text-align: center;
+         margin-top: 38px;
+         width: 280px;
+         height: 50px;
+         background-color: #4180b4;
+         color: white;
+         font-size: 18px;
+         line-height: 50px;
+       }
+     }
+   }
+    .modal-forget-container {
+
+      transition: all 0.5s;
+      -moz-transition: all 0.5s; /* Firefox 4 */
+      -webkit-transition: all 0.5s; /* Safari and Chrome */
+      -o-transition: all 0.5s;
+      position: absolute;
+      z-index: 1001;
+      left: 0px;
+      opacity: 1;
+      bottom: 150px;
+      width: 370px;
+      height: 240px;
+      .sigin-item {
+        margin-left: 45px;
+        input {
+          width: 280px;
+          border: none;
+          color: black;
+        }
+        input:focus {
+          //outline: none;
+        }
+        .sign-line {
+          transition: all 0.5s;
+          -moz-transition: all 0.5s; /* Firefox 4 */
+          -webkit-transition: all 0.5s; /* Safari and Chrome */
+          -o-transition: all 0.5s;
+          width: 280px;
+          height: 2px;
+          margin-top: 7px;
+          background-color: black;
+        }
+        .sigin-btn {
+          text-align: center;
+          margin-top: 38px;
+          width: 280px;
+          height: 50px;
+          background-color: #3bb474;
+          color: white;
+          font-size: 18px;
+          line-height: 50px;
+        }
+
+      }
+    }
+    .modal-social {
+      position: absolute;
+      bottom: 0px;
+      width: 370px;
+      height: 90px;
+
+      img {
+        margin-left: 35px;
+      }
+    }
+  }
+}
+
+.top {
+  transition: 0.5s;
+  width: 100%;
+  z-index: 999;
+  //top: -100px;
+  top: 10px;
+  position: fixed;
+}
+
+//.top-clear {
+//  width: 100%;
+//  height: 160px;
+//}
+
+//头部
+.header {
+
+  height: 100px;
+  .header-logo {
+    //display: inline-block;
+    width: 100px;
+    float: left;
+    padding-top: 20px;
+  }
+  .header-btn {
+    margin-top: 30px;
+    height: 40px;
+    width: 120px;
+    float: left;
+    margin-left: 80%;
+    display: inline-block;
+    box-shadow: 1px 1px 1px 1px #e8e6e6;
+    border-radius: 5px;
+    .login-btn {
+
+      line-height: 40px;
+      margin-left: 14px;
+      text-align: center;
+      color: black;
+      display: inline-block;
+      width: 40px;
+
+    }
+
+  }
+}
+
+.nav-menu {
+
+  width: 1200px;
+  margin: 0 auto;
+  height: 60px;
+  display: flex;
+  background-color: #f0f1f2;
+
+  position: relative;
+  li {
+    width: 100px;
+    font-family: "微软雅黑";
+    height: 60px;
+    overflow: hidden;
+    list-style: none;
+    margin-left: 23px;
+    a {
+      overflow: hidden;
+      transition: 0.3s;
+      color: black;
+      display: block;
+      font-size: 16px;
+      line-height: 60px;
+      text-align: center;
+      text-decoration: none;
+      &:hover {
+        color: #d2b988;
+        margin-top: -60px;
+        transition: 0.5s;
+      }
+    }
+    #nav-ks {
+      transition: 0.3s;
+      display: block;
+      &:hover {
+
+        margin-top: -60px;
+        transition: 0.5s;
+      }
+    }
+    .nav-icon {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      margin-left: 38px;
+      width: 24px;
+      height: 13px;
+      transition: 0.5s;
+      background: url("../../images/nav-icon.png");
+    }
+    .nav-icon2 {
+      margin-top: 45px;
+      margin-bottom: 24px;
+      margin-left: 38px;
+      width: 24px;
+      height: 13px;
+      transition: 0.5s;
+      background: url("../../images/nav-icon2.png");
+    }
+  }
+
+}
+
+@media (max-width: 1000px) {
+  .result-item {
+    font-size: 50%;
+  }
+  .teacher {
+    display: none;
+  }
+}
+
+p {
+  text-align: center;
+  overflow: hidden;
+}
+
+//slogan
+.slogans {
+  display: block;
+  padding-bottom: 82px;
+  width: 30%;
+  margin: 20px auto;
+  h5 {
+    font-size: 16px;
+    margin-top: 15px;
+    text-align: center;
+    color: #999999;
+  }
+  h4 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 22px;
+    color: #333333;
+  }
+  img {
+    margin-top: 36px;
+    margin-bottom: 10px;
+
+  }
+  #slogan_line {
+    //width: 140px;
+    display: block;
+  }
+  #slogan_logo {
+    width: 100%;
+  }
+  //@media (max-width: 1000px) {
+  //  width: 80%;
+  //  #slogan_logo {
+  //    width: 100%;
+  //  }
+  //}
+}
+
+.home-banner {
+
+  width: 100%;
+  margin-top: 160px;
+  height: 60%;
+  //height: 662px;
+  position: relative;
+  img {
+    z-index: 0;
+    width: 100%;
+    height: 70%;
+  }
+
+}
+
+.banner-word {
+  height: 50px;
+  width: 20%;
+  margin: 0 auto;
+
+  text-align: center;
+  color: white;
+  position: absolute;
+  opacity: 1;
+  transition: 1s;
+  top: 250px;
+  left: 40%;
+  .banner-button {
+    overflow: hidden;
+    height: 55px;
+    line-height: 55px;
+    margin-top: 70%;
+    width: 50%;
+    margin-left: 25%;
+    border: 3px solid white;
+    p {
+      text-align: center;
+      transition: all 0.5s;
+      -moz-transition: all 0.5s; /* Firefox 4 */
+      -webkit-transition: all 0.5s; /* Safari and Chrome */
+      -o-transition: all 0.5s;
+
+    }
+    h4 {
+      a {
+        line-height: 55px;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+  }
+  &:hover {
+    .banner-button {
+      p {
+        margin-top: -65px;
+      }
+
+    }
+  }
+
+}
+
+//轮播图
+.carousel {
+  margin-top: 160px;
+  .carousel-inner {
+    img {
+      width: 100%;
+      height: 60%;
+    }
+    .carousel-title {
+      font-size: 40px;
+      font-weight: 300;
+      color: white;
+    }
+  }
+
+  .carousel-indicators {
+    z-index: 10;
+    li {
+    }
+    .active {
+      //background-color: rebeccapurple;
+    }
+  }
+}
+
+//成果展示
+.results {
+  .result-scroll {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #00b3ee;
+    .result-scroll-img {
+      width: 180px;
+      margin: 0 auto;
+    }
+
+  }
+  .result-item {
+    position: relative;
+    width: 224px;
+    height: 172px;
+    margin-left: 55px;
+    display: inline-block;
+    margin-bottom: 56px;
+    box-shadow: 3px 3px 3px 3px #e8e6e6;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s; /* Firefox 4 */
+    -webkit-transition: all 0.5s; /* Safari and Chrome */
+    -o-transition: all 0.5s;
+    overflow: hidden;
+    a {
+      color: black;
+    }
+    img {
+      width: 224px;
+      height: 190px;
+    }
+    .result-item-title {
+      position: absolute;
+      background-color: white;
+      width: 100%;
+      z-index: 10;
+      height: 40px;
+      bottom: 0px;
+      line-height: 40px;
+      font-weight: 100;
+      text-align: center;
+      font-size: 100%;;
+      color: #333333;
+      #result-line {
+        transition: all 0.5s;
+        -moz-transition: all 0.5s; /* Firefox 4 */
+        -webkit-transition: all 0.5s; /* Safari and Chrome */
+        -o-transition: all 0.5s;
+        width: 0%;
+        height: 2px;
+        background-color: #00b3ee;
+      }
+
+    }
+    .result-item-word {
+      padding: 5px;
+      transition: all 0.5s;
+      -moz-transition: all 0.5s; /* Firefox 4 */
+      -webkit-transition: all 0.5s; /* Safari and Chrome */
+      -o-transition: all 0.5s;
+      position: absolute;
+      width: 100%;
+      top: 190px;
+      background-color: white;
+      height: 140px;
+
+    }
+
+    &:hover {
+      .result-item-word {
+        opacity: 0.98;
+        top: 40px;
+      }
+      #result-line {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//融资信息
+.news {
+  .container-fluid {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .news-dynamic {
+    margin-right: 30px;
+    display: inline-block;
+    width: 800px;
+    .dynamic-item {
+      width: 800px;
+      height: 188px;
+      box-shadow: 0px 0px 5px #e8e6e6;
+      margin-bottom: 36px;
+      padding: 1%;
+      .dynamic_img {
+        float: left;
+        width: 220px;
+        height: 160px;
+        img {
+          width: 100%;
+        }
+      }
+      .dynamic-desrc {
+        position: relative;
+
+        float: left;
+        margin-left: 20px;
+        width: 510px;
+        height: 160px;
+        font-size: 100%;
+        h4 {
+          font-size: 20px;
+          color: #333333;
+          margin-bottom: 28px;
+        }
+        #news-from {
+          position: absolute;
+          bottom: 0px;
+          font-size: 12px;
+          color: #5b2580;
+          span {
+            margin-left: 28px;
+            font-size: 12px;
+            color: #999999;
+          }
+        }
+
+        p {
+          text-indent: 2em;
+          font-size: 14px;
+          color: #999999;
+        }
+      }
+    }
+  }
+
+  .news-finance {
+    padding: 0 1%;
+    width: 340px;
+    height: 634px;
+    float: right;
+    box-shadow: 0px 0px 3px #e8e6e6;
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      color: #333333;
+    }
+    .finance-item {
+      margin-top: 20px;
+      p {
+        margin: 0 20px;
+        font-weight: 200;
+        height: 40px;
+        font-size: 18px;
+        line-height: 20px;
+        color: #666666;
+      }
+      #finance-from {
+        margin: 16px 20px 0px;
+
+        font-size: 12px;
+        color: #d7be8e;
+        span {
+          margin-right: 18px;
+          color: #999999;
+        }
+      }
+    }
+    .finance-button {
+      width: 284px;
+      height: 58px;
+      margin: 0 20px;
+      text-align: center;
+      line-height: 54px;
+      a {
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+      }
+
+    }
+  }
+}
+
+//学术大咖
+.teacher {
+  height: 920px;
+  margin-top: 58px;
+  #teacher-carousel {
+    .teacher-item {
+      //float: left;
+      //width: 20%;
+      //margin-right: 4%;
+      //height: 440px;
+      //background-color: #00b3ee;
+
+      img {
+        width: 100%;
+        height: 120%;
+        display: block;
+      }
+      .caption {
+        margin-top: -20px;
+        h3 {
+          font-size: 20px;
+          color: #333333;
+        }
+        span {
+          font-size: 14px;
+          color: #666666;
+        }
+        h5 {
+          font-size: 16px;
+          text-align: center;
+          color: #d7be8e;
+        }
+        p {
+          height: 120px;
+          line-height: 20px;
+          font-size: 14px;
+          color: #d7be8a;
+        }
+      }
+    }
+  }
+}
+
+//空间
+.area {
+  .area-item {
+
+    img {
+      width: 60%;
+      margin: 0 20%;
+    }
+    .area-item-title {
+      h1 {
+        font-size: 26px;
+        color: #6b3a8c
+      }
+      h5 {
+        font-size: 14px;
+        color: #999999;
+      }
+      h4 {
+        font-weight: 200;
+        font-size: 20px;
+        color: #666666;
+      }
+      text-align: center;
+    }
+  }
+
+}
+
+//大事件
+
+.event {
+  position: relative;
+  margin-top: 128px;
+  height: 1140px;
+  #event_line {
+    position: absolute;
+    left: 50%;
+
+  }
+  .event-container {
+    position: relative;
+    .main-event-left {
+      opacity: 0;
+      transition: all 2s;
+      -moz-transition: all 2s; /* Firefox 4 */
+      -webkit-transition: all 2s; /* Safari and Chrome */
+      -o-transition: all 2s;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 3px #e8e6e6;
+      width: 500px;
+      img {
+        float: right;
+        width: 230px;
+        height: 160px;
+
+      }
+      span {
+        text-align: right;
+        margin-right: 20px;
+        width: 200px;
+        float: right;
+      }
+      p {
+        text-align: right;
+        margin-right: 20px;
+        width: 250px;
+        float: right;
+      }
+    }
+    .main-event-right {
+      opacity: 0;
+      transition: 2s;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 3px #e8e6e6;
+      width: 500px;
+      margin-left: 600px;
+      img {
+        float: left;
+        width: 230px;
+        height: 160px;
+      }
+      span {
+        margin-left: 20px;
+        width: 200px;
+        float: left;
+      }
+      p {
+        margin-left: 20px;
+        width: 250px;
+        float: left;
+      }
+    }
+  }
+}
+
+//合作伙伴
+.partner {
+  margin-top: 54px;
+  margin-bottom: 54px;
+  .partner_logo_item {
+    border: solid 1px #e1e1e1;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+//底部
+.main-footer {
+
+  padding-bottom: 20px;
+  background-color: #6b3a8c;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  .footer_menu {
+    margin-top: 54px;
+    a {
+      color: white;
+    }
+
+  }
+
+}
