@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('main.partials.app')
 
 @section('content')
     {{--banner--}}
@@ -9,7 +9,7 @@
     <section class="activity-choice">
         <div class="slogans center-block">
             <img id="slogan_logo" src="/images/slogan2.png" alt="">
-            <h5>ADASFSDFDSFSdsadasD</h5>
+            <h5>PUBLIC SERVICE ACTIVITIES</h5>
             <h4>公益活动</h4>
             <img class="center-block" id="slogan_line" src="/images/slogan1.png" alt="">
         </div>

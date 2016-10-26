@@ -1,15 +1,36 @@
-@extends('layouts.app')
+@extends('main.partials.app')
 
 @section('content')
     {{--bannner--}}
     <section class="activity-banner">
-        <img src="/images/activity/01_banner.png" alt="">
+        <div id="myCarousel" class="carousel slide">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="/images/activity/01_banner.png" alt="First slide">
+                </div>
+                <div class="item">
+                    <img src="/images/activity/01_banner.png" alt="Second slide">
+                </div>
+                <div class="item">
+                    <img src="/images/activity/01_banner.png" alt="Third slide">
+                </div>
+            </div>
+
+        </div>
+
     </section>
     {{--choice--}}
     <section class="activity-choice">
         <div class="slogans center-block">
             <img id="slogan_logo" src="/images/slogan2.png" alt="">
-            <h5>ADASFSDFDSFSdsadasD</h5>
+            <h5>ENTREPRENEURIAL ACTIVITY</h5>
             <h4>创业活动</h4>
             <img class="center-block" id="slogan_line" src="/images/slogan1.png" alt="">
         </div>

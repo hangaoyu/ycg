@@ -1,63 +1,76 @@
 <!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    {{--<meta name="viewport" content="width=device-width, initial-scale=1">--}}
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta http-equiv="x-pjax-version" content="{{ elixir('js/base.js') }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
-    <link rel="stylesheet" href="{{ elixir('css/style.css') }}">
-    {{--<link href="/css/style.css" rel="stylesheet">--}}
-    <link rel="stylesheet" href="{{ asset('/css/nprogress.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+@section('htmlheader')
+    @include('layouts.partials.htmlheader')
+@show
+@section('scripts')
+    @include('layouts.partials.scripts')
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+@show
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="skin-blue sidebar-mini">
 
-    <!-- Scripts -->
-    <script>
-        window.Laravel = <?php echo json_encode([
-                'csrfToken' => csrf_token(),
-        ]); ?>
-    </script>
-</head>
-<body>
-<div id="app">
-    {{--@include('layouts.header')--}}
-    @include('layouts.nav')
-    <div class="top-clear"></div>
-    <div class="main-content" id="pjax-container">
-        @yield('content')
-    </div>
-    @include('layouts.footer')
-</div>
-@include('layouts.login')
-<!-- Scripts -->
-<script src="{{ elixir('js/app.js') }}" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" ></script>
-<script src="//cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js" ></script>
-<script type="text/javascript" src="{{ asset('/js/nprogress.js') }}" async="async"></script>
-<script src="{{ elixir('js/base.js') }}" async="async"></script>
-<script async="async">
-    $(document).pjax('.pjax a', '#pjax-container');
-    $(document).on('pjax:start', function () {
-        NProgress.start();
-//        // entrepreneur
-//         var entrepreneur_banner = $('.entrepreneur-banner-word');
-//         entrepreneur_banner.css({opacity: 1});
-//         //investor
-//         var investor_bannner_bottom = $('.bottom-container');
-//         investor_bannner_bottom.css({opacity: 1});
+<div class="wrapper" id="app">
+
+    @include('layouts.partials.mainheader')
+
+    @include('layouts.partials.sidebar')
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+        @include('layouts.partials.contentheader')
+
+        <!-- Main content -->
+        <section class="content" >
+            <div class="main-content" id="pjax-container">
+            <!-- Your Page Content Here -->
+            @yield('content')
+            </div>
+        </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+
+    @include('layouts.partials.controlsidebar')
+
+    @include('layouts.partials.footer')
+
+</div><!-- ./wrapper -->
+<script src="/js/admin.js" ></script>
+<script src="{{ asset('/js/jquery.form.js') }}" type="text/javascript"></script>
+{{--adminlte.js--}}
+<script src="{{ asset('/js/app.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/js/dcalendar_picker.js') }}" type="text/javascript"></script>
+<script type="text/javascript">
+
+    $('#mydatepicker2').dcalendarpicker({
+        format:'yyyy-mm-dd'
     });
-    $(document).on('pjax:end', function () {
-        NProgress.done();
-    });
-    $(document).on("pjax:timeout", function (event) {
-// 阻止超时导致链接跳转事件发生
-        event.preventDefault()
-    });
+    $('#mycalendar').dcalendar();
 </script>
 </body>
 </html>

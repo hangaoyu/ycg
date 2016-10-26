@@ -34,5 +34,11 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    'weibo' => [
+        'client_id' => env('WEIBO_CLIENT_ID'),
+        'client_secret' => env('WEIBO_CLIENT_SECRET'),
+        'redirect' => env('WEIBO_CLIENT_REDIRECT'),
+    ],
+
 
 ];

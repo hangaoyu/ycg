@@ -1,6 +1,15 @@
 window.onscroll = function () {
+
     var t = $(window).scrollTop();
-    // console.log(t);
+
+
+    // var totalheight = $(document).height();
+    // var totalweight = document.body.scrollWidth;
+    // console.log(totalweight);
+    // var line_width = (t / totalheight) * 1.2 * totalweight;
+    // // console.log(line_width);
+    // $('.top-line').css({width: line_width});
+    // // console.log(t);
     //导航栏
     var top = $('.top');
     if (t >= 160) {
@@ -32,7 +41,7 @@ window.onscroll = function () {
     var bt3 = $('#about-bt3');
     var bt4 = $('#about-bt4');
     var detail2 = $('#about-health-detail');
-    if (t >= 1200) {
+    if (t >= 1900) {
         wm.addClass('fadeInLeft');
         wm.css({opacity: 1});
         bt3.addClass('fadeInUp');

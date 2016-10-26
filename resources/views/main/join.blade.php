@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('main.partials.app')
 
 @section('content')
     {{--banner--}}
@@ -9,11 +9,12 @@
     <section class="join-us">
         <div class="slogans center-block">
             <img id="slogan_logo" src="/images/slogan2.png" alt="">
-            <h5>ADASFSDFDSFSdsadasD</h5>
+            <h5>RECRUITMENT INFORMATION/LET’S JOIN US</h5>
             <h4>加入我们</h4>
             <img class="center-block" id="slogan_line" src="/images/slogan1.png" alt="">
         </div>
         <div class="join-jobs">
+
             <div class="join-job-1">
                 <p>
                     投资经理 Investment manager

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('main.partials.app')
 
 @section('content')
     {{--banner--}}
@@ -10,7 +10,7 @@
         <div class="container">
             <div class="slogans center-block">
                 <img id="slogan_logo" src="/images/slogan2.png" alt="">
-                <h5>ADASFSDFDSFSdsadasD</h5>
+                <h5>WECHAT TWO-DIMENSIONAL CODE</h5>
                 <h4>我们的微信二维码</h4>
                 <img class="center-block" id="slogan_line" src="/images/slogan1.png" alt="">
             </div>

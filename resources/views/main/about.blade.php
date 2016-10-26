@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('main.partials.app')
 
 @section('content')
     {{--banner--}}
@@ -26,7 +26,7 @@
                     <h4>云创谷简介</h4>
                 </div>
                 <hr>
-                <p>sadas按时打算sadas按时打算sadas按时打算sadas按时打算sadas按时打算sadas按时打算sadas按时打算sadas按时打算sadas按时打算</p>
+                <p>{!! $base->production !!}}</p>
             </div>
         </div>
     </section>
@@ -50,7 +50,7 @@
                 BOUT THE BIG-HEALTH
             </div>
             <hr>
-            <p>sadas按时打算sadas按时打算sadas按时打算sadas按时打算sadas按时打算sadas按时打算sadas按时打算sadas按时打算sadas按时打算</p>
+            <p>{{$base->healthy}}</p>
         </div>
     </section>
 
@@ -65,43 +65,29 @@
             </div>
             <div class="event-container">
                 <div><img id="about-line" class="animated" src="/images/line.png" alt=""></div>
-                <div class="event-right animated">
-                    <img src="/images/event_pic1.png" alt="">
-                    <div class="event-desrc">
-                        <span>2016 9 3</span>
-                        <p>大大技术来开发很舒服的大大技术来开发很舒服的会计部分操作会计部分操作</p>
-                    </div>
-                    <div style="clear: both"></div>
-                </div>
-                <div class="event-left animated" >
-                    <img src="/images/event_pic1.png" alt="">
-                    <span>2016 9 3</span>
+                @foreach($events as $key => $event)
+                    @if($key%2 == 0)
+                        <div class="event-right animated">
+                            <img src="{{$event->imgsrc}}" alt="">
+                            <div class="event-desrc">
+                                <span>{{$event->time}}</span>
+                                <p>{{$event->detail}}</p>
+                            </div>
+                            <div style="clear: both"></div>
+                        </div>
+                    @else
+                        <div class="event-left animated">
+                            <img src="{{$event->imgsrc}}" alt="">
+                            <div class="event-desrc">
+                                <span>{{$event->time}}</span>
+                                <p>{{$event->detail}}</p>
+                            </div>
+                            <div style="clear: both"></div>
+                        </div>
+                    @endif
 
-                    <p>大大技术来开发很舒服的会计部分操作大大技术来开发很舒服的会计部分操作</p>
-                    <div style="clear: both"></div>
-                </div>
-                <div class="event-right animated" >
-                    <img src="/images/event_pic1.png" alt="">
-                    <div class="event-desrc">
-                        <span>2016 9 3</span>
-                        <p>大大技术来开发很舒服的大大技术来开发很舒服的会计部分操作会计部分操作</p>
-                    </div>
-                    <div style="clear: both"></div>
-                </div>
-                <div class="event-left animated" >
-                    <img src="/images/event_pic1.png" alt="">
-                    <span>2016 9 3</span>
-                    <p>大大技术来开发很舒服的会计部分操作大大技术来开发很舒服的会计部分操作</p>
-                    <div style="clear: both"></div>
-                </div>
-                <div class="event-right animated" >
-                    <img src="/images/event_pic1.png" alt="">
-                    <div class="event-desrc">
-                        <span>2016 9 3</span>
-                        <p>大大技术来开发很舒服的大大技术来开发很舒服的会计部分操作会计部分操作</p>
-                    </div>
-                    <div style="clear: both"></div>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </section>

@@ -57,11 +57,12 @@
   }
   .process-word {
     width: 1200px;
-    margin: 26px 0px 138px 170px;
+    margin: 26px 0px 138px 160px;
+
     display: block;
 
     .process-word-item {
-      margin-right: 190px;
+      margin-right: 160px;
       text-align: center;
       display: inline-block;
       h3 {
@@ -135,7 +136,7 @@
   margin: 20px 0;
   .entrepreneur-apply {
     width: 1200px;
-    margin: 100px auto;
+    margin: 0px auto 100px;
     padding-top: 50px;
     padding-bottom: 10px;
     .entrepreneur-apply-word {
@@ -167,6 +168,7 @@
         display: inline-block;
         text-align: center;
         h4 {
+
           font-size: 20px;
           color: #7a1183;
         }

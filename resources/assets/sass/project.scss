@@ -59,7 +59,7 @@
         width: 0px;
         height: 4px;
 
-        background-color: #00b3ee;
+        background-color: purple;
         margin: -5px auto 0;
         transition: all 0.7s;
         -moz-transition: all 0.7s; /* Firefox 4 */
@@ -68,7 +68,7 @@
       }
       &:hover {
         .p-line{
-          width: 150px;
+          width: 250px;
         }
       }
     }

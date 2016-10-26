@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('main.partials.app')
 
 @section('content')
     {{--bannner--}}
@@ -9,8 +9,8 @@
                 <div class="bottom-item animated ">
                     <div class="title">
                         <h3>医创论坛</h3>
-                        <h4>DSSFJDSGLKDGJFGJLFDJGFL</h4>
-                        <h5>来自按时发生的国发股份啊</h5>
+                        <h4> Medicine Tribune </h4>
+                        <h5>{{$base->h_title}}</h5>
                     </div>
                 </div>
                 <div class="bottom-item-right animated ">
@@ -28,7 +28,7 @@
                         <img class="investor-category-bt" src="/images/investor/bt.png" alt="">
                         <hr>
                         <h3>医学论坛 <img src="/images/investor/icon.png"></h3>
-                        <p>的飒飒浪费和收款方从安抚发多少但是的飒飒浪费和收款方从安抚发多少但是的飒飒浪费和收款方从安抚发多少但是放大发发</p>
+                        <p>{{$base->h_title}}</p>
                     </a>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                         <img class="investor-category-bt" src="/images/investor/bt.png" alt="">
                         <hr>
                         <h3>投资人训练营 <img src="/images/investor/icon.png"></h3>
-                        <p>的飒飒浪费和收款方从安抚发多少但是的飒飒浪费和收款方从安抚发多少但是的飒飒浪费和收款方从安抚发多少但是放大发发</p>
+                        <p>{{$base->i_title}}</p>
                     </a>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                         <img class="investor-category-bt" src="/images/investor/bt.png" alt="">
                         <hr>
                         <h3>商务合作入口 <img src="/images/investor/icon.png"></h3>
-                        <p>的飒飒浪费和收款方从安抚发多少但是的飒飒浪费和收款方从安抚发多少但是的飒飒浪费和收款方从安抚发多少但是放大发发</p>
+                        <p>{{$base->b_title}}</p>
                     </a>
                 </div>
             </div>

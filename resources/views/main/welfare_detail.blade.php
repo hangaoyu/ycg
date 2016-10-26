@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('main.partials.app')
 
 @section('content')
     {{--bannner--}}
@@ -8,7 +8,7 @@
     <section class="activity-desrc">
         <div class="slogans center-block">
             <img id="slogan_logo" src="/images/slogan2.png" alt="">
-            <h5>ADASFSDFDSFSdsadasD</h5>
+            <h5>ACTIVITY OF THE PROCESS</h5>
             <h4>活动流程</h4>
             <img class="center-block" id="slogan_line" src="/images/slogan1.png" alt="">
         </div>
@@ -21,7 +21,7 @@
     <section class="active-contact">
         <div class="slogans center-block">
             <img id="slogan_logo" src="/images/slogan2.png" alt="">
-            <h5>ADASFSDFDSFSdsadasD</h5>
+            <h5>CONTACT INFORMATION</h5>
             <h4>联系方式</h4>
             <img class="center-block" id="slogan_line" src="/images/slogan1.png" alt="">
         </div>
@@ -41,7 +41,7 @@
     <section class="active-apply">
         <div class="slogans center-block">
             <img id="slogan_logo" src="/images/slogan2.png" alt="">
-            <h5>ADASFSDFDSFSdsadasD</h5>
+            <h5>REGISTRATION FORM</h5>
             <h4>我要报名</h4>
             <img class="center-block" id="slogan_line" src="/images/slogan1.png" alt="">
         </div>

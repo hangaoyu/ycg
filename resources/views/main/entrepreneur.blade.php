@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('main.partials.app')
 
 @section('content')
     {{--banner--}}
@@ -7,7 +7,7 @@
         <div class="entrepreneur-banner-word animated ">
             <h1>大咖教你创业</h1>
             <h2>HYCOMBINATOE</h2>
-            <h3>DASIFOSOFUYUGDGHDJVJIEOIF</h3>
+            <h3>DRY SHARE FROM TOP INVESTORS AND ENTREPRENEURS</h3>
             <h4>来自顶级投资人和创业者的干货分享</h4>
             <div class="banner-button pjax">
                 <a href="/activity">查看详情</a>
@@ -20,7 +20,7 @@
 
         <div class="slogans center-block">
             <img id="slogan_logo" src="/images/slogan2.png" alt="">
-            <h5>ADASFSDFDSFSdsadasD</h5>
+            <h5>FUNDING APPLICATION PROCESS</h5>
             <h4>资金申请流程</h4>
             <img class="center-block" id="slogan_line" src="/images/slogan1.png" alt="">
         </div>
@@ -34,14 +34,14 @@
                 <h5>Submit Application</h5>
             </div>
             <div class="process-word-item">
-                <h3>提交申请</h3>
-                <h4>在线注册并提交申请</h4>
-                <h5>Submit Application</h5>
+                <h3>等待审核</h3>
+                <h4>工作人员需要审核您的申请</h4>
+                <h5>Pending Review</h5>
             </div>
             <div class="process-word-item">
-                <h3>提交申请</h3>
-                <h4>在线注册并提交申请</h4>
-                <h5>Submit Application</h5>
+                <h3>放款成功</h3>
+                <h4>审核成功后将尽快获得借款</h4>
+                <h5>Lenders Success</h5>
             </div>
         </div>
         <div class="process-category">
@@ -100,7 +100,7 @@
         <div class="entrepreneur-apply">
             <div class="slogans center-block">
                 <img id="slogan_logo" src="/images/slogan2.png" alt="">
-                <h5>ADASFSDFDSFSdsadasD</h5>
+                <h5>APPLY FOR INCUBATION</h5>
                 <h4>云创谷孵化申请</h4>
                 <img class="center-block" id="slogan_line" src="/images/slogan1.png" alt="">
             </div>

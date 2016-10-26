@@ -46,6 +46,8 @@
     z-index: 10;
     opacity: 0;
     transition: 1s;
+    text-align: left;
+
     background-color: white;
     width: 854px;
     height: 454px;
@@ -55,6 +57,10 @@
     left: 290px;
     top: 230px;
     padding: 34px 70px 34px 130px;
+    p{
+      text-align: left;
+      text-indent: 2em;
+    }
   }
 }
 
@@ -111,6 +117,10 @@
 
     top: 480px;
     padding: 34px 70px 34px 130px;
+    p{
+      text-align: left;
+      text-indent: 2em;
+    }
   }
 }
 

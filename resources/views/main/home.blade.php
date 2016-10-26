@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('main.partials.app')
 @section('content')
     {{--轮播图--}}
 
@@ -19,163 +18,84 @@
         <div class="container">
             <div class="slogans center-block">
                 <img id="slogan_logo" src="/images/slogan2.png" alt="">
-                <h5>ADASFSDFDSFSdsadasD</h5>
+                <h5>INCUBATOR ACHIEVEMENTS EXHIBITION</h5>
                 <h4>云创谷孵化成果展示</h4>
                 <img class="center-block" id="slogan_line" src="/images/slogan1.png" alt="">
             </div>
             <div class="row">
-                <div class="result-item">
-                    <a href="/project" target="_blank"><img src="/images/result1.png" alt="">
-                        <div class="result-item-title">
-                            <div id="result-line"></div>
-                            投资项目
-                        </div>
-                        <div class="result-item-word"><p>内容描述内容描述内容描述内容描述内容描述内容描述内容描述</p></div>
-                    </a>
-                </div>
-                <div class="result-item">
-                    <a href="/project"  target="_blank"><img src="/images/result1.png" alt="">
-                        <div class="result-item-title">
-                            <div id="result-line"></div>
-                            投资项目
-                        </div>
-                        <div class="result-item-word"><p>内容描述内容描述内容描述内容描述内容描述内容描述内容描述</p></div>
-                    </a>
-                </div>
-                <div class="result-item">
-                    <a href="/project" target="_blank"><img src="/images/result1.png" alt="">
-                        <div class="result-item-title">
-                            <div id="result-line"></div>
-                            投资项目
-                        </div>
-                        <div class="result-item-word"><p>内容描述内容描述内容描述内容描述内容描述内容描述内容描述</p></div>
-                    </a>
-                </div>
-                <div class="result-item">
-                    <a href="/project" target="_blank"><img src="/images/result1.png" alt="">
-                        <div class="result-item-title">
-                            <div id="result-line"></div>
-                            投资项目
-                        </div>
-                        <div class="result-item-word"><p>内容描述内容描述内容描述内容描述内容描述内容描述内容描述</p></div>
-                    </a>
-                </div>
-                <div class="result-item">
-                    <a href="/project" target="_blank"><img src="/images/result1.png" alt="">
-                        <div class="result-item-title">
-                            <div id="result-line"></div>
-                            投资项目
-                        </div>
-                        <div class="result-item-word"><p>内容描述内容描述内容描述内容描述内容描述内容描述内容描述</p></div>
-                    </a>
-                </div>
-                <div class="result-item">
-                    <a href="/project" target="_blank"><img src="/images/result1.png" alt="">
-                        <div class="result-item-title">
-                            <div id="result-line"></div>
-                            投资项目
-                        </div>
-                        <div class="result-item-word"><p>内容描述内容描述内容描述内容描述内容描述内容描述内容描述</p></div>
-                    </a>
-                </div>
-                <div class="result-item">
-                    <a href="/project" target="_blank"><img src="/images/result1.png" alt="">
-                        <div class="result-item-title">
-                            <div id="result-line"></div>
-                            投资项目
-                        </div>
-                        <div class="result-item-word"><p>内容描述内容描述内容描述内容描述内容描述内容描述内容描述</p></div>
-                    </a>
-                </div>
-                <div class="result-item">
-                    <a href="/project" target="_blank"><img src="/images/result1.png" alt="">
-                        <div class="result-item-title">
-                            <div id="result-line"></div>
-                            投资项目
-                        </div>
-                        <div class="result-item-word"><p>内容描述内容描述内容描述内容描述内容描述内容描述内容描述</p></div>
-                    </a>
-                </div>
+                @foreach($projects as $project)
+                    <div class="result-item">
+                        <a href="{{url('project/'.$project->id)}}" target="_blank"><img src="{{$project->logo}}" alt="">
+                            <div class="result-item-title">
+                                <div id="result-line"></div>
+                                {{$project->name}}
+                            </div>
+                            <div class="result-item-word"><p>{{$project->desrc}}</p></div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
             {{--<div class="result-scroll">--}}
-                {{--<div class="result-scroll-img">--}}
-              {{--<img src="/images/h-left.png" alt="">--}}
-                    {{--<a href="/more_project">  <img src="/images/h-result-more.png" alt=""></a>--}}
-                    {{--<img src="/images/h-right.png" alt="">--}}
-                {{--</div>--}}
+            {{--<div class="result-scroll-img">--}}
+            {{--<img src="/images/h-left.png" alt="">--}}
+            {{--<a href="/more_project">  <img src="/images/h-result-more.png" alt=""></a>--}}
+            {{--<img src="/images/h-right.png" alt="">--}}
+            {{--</div>--}}
 
 
             {{--</div>--}}
         </div>
     </section>
     {{--融资信息--}}
-    <section class="news">
+    <section class="news" style="">
         <div class="container">
             <div class="slogans center-block">
                 <img id="slogan_logo" src="/images/slogan2.png" alt="">
-                <h5>ADASFSDFDSFSdsadasD</h5>
+                <h5>FINANCIAL INFORMATION/ INDUSTRY NEWS</h5>
                 <h4>云创谷产业动态/融资信息</h4>
                 <img class="center-block" id="slogan_line" src="/images/slogan1.png" alt="">
             </div>
         </div>
         <div class="container-fluid">
             <div class="news-container">
-                <div class="news-dynamic">
-                    <div class="dynamic-item">
-                        <div class="dynamic_img">
-                            <img src="/images/news1.png">
+                <div class="news-finance">
+                    @foreach($finances as $finance)
+                        <div class="finance-item">
+                            <div class="finance_img">
+                                <img src="{{$finance->imgsrc}}">
+                            </div>
+                            <div class="finance-desrc">
+                                <h4><a href="{{url('finance/'.$finance->id)}}"><strong>{{$finance->title}}</strong></a></h4>
+                                <p>{{$finance->desrc}}</p>
+                                <div id="news-from">{{$finance->time}}<span>{{$finance->author}}</span></div>
+                            </div>
                         </div>
-                        <div class="dynamic-desrc">
-                            <h4>阿萨德撒撒欢发撒</h4>
-                            <p>阿萨德撒撒欢发撒阿萨德撒撒欢发撒阿萨德撒撒欢发撒阿萨德撒撒欢发撒阿萨德撒撒欢发撒阿萨德撒撒欢发撒</p>
-                            <div id="news-from">阿萨德撒撒欢发撒<span>12312424215</span></div>
-                        </div>
-                    </div>
-                    <div class="dynamic-item">
-                        <div class="dynamic_img">
-                            <img src="/images/news1.png">
-                        </div>
-                        <div class="dynamic-desrc">
-                            <h4>阿萨德撒撒欢发撒</h4>
-                            <p>阿萨德撒撒欢发撒阿萨德撒撒欢发撒阿萨德撒撒欢发撒阿萨德撒撒欢发撒阿萨德撒撒欢发撒阿萨德撒撒欢发撒</p>
-                            <div id="news-from">阿萨德撒撒欢发撒<span>12312424215</span></div>
-                        </div>
-                    </div>
-                    <div class="dynamic-item">
-                        <div class="dynamic_img">
-                            <img src="/images/news1.png">
-                        </div>
-                        <div class="dynamic-desrc">
-                            <h4>阿萨德撒撒欢发撒</h4>
-                            <p>阿萨德撒撒欢发撒阿萨德撒撒欢发撒阿萨德撒撒欢发撒阿萨德撒撒欢发撒阿萨德撒撒欢发撒阿萨德撒撒欢发撒</p>
-                            <div id="news-from">阿萨德撒撒欢发撒<span>12312424215</span></div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
 
-                <div class="news-finance">
+                <div class="news-dynamic">
                     <h1>云创谷融资信息</h1>
-                    <div class="finance-item">
+                    <div class="dynamic-item">
                         <p>浙江省额外企鹅我浙江省额外企鹅我去的说法氛围让去的说法氛围让</p>
                         <div id="finance-from"><span>12312424215</span>阿萨德撒撒欢发撒</div>
                         <hr>
                     </div>
-                    <div class="finance-item">
+                    <div class="dynamic-item">
                         <p>浙江省额外企鹅我浙江省额外企鹅我去的说法氛围让去的说法氛围让</p>
                         <div id="finance-from"><span>12312424215</span>阿萨德撒撒欢发撒</div>
                         <hr>
                     </div>
-                    <div class="finance-item">
+                    <div class="dynamic-item">
                         <p>浙江省额外企鹅我浙江省额外企鹅我去的说法氛围让去的说法氛围让</p>
                         <div id="finance-from"><span>12312424215</span>阿萨德撒撒欢发撒</div>
                         <hr>
                     </div>
-                    <div class="finance-item">
+                    <div class="dynamic-item">
                         <p>浙江省额外企鹅我浙江省额外企鹅我去的说法氛围让去的说法氛围让</p>
                         <div id="finance-from"><span>12312424215</span>阿萨德撒撒欢发撒</div>
                         <hr>
                     </div>
-                    <div class="finance-button" style="background: url('/images/learnmore.png') no-repeat">
+                    <div class="dynamic-button" style="background: url('/images/learnmore.png') no-repeat">
                         <a href="">查看更多</a>
                     </div>
                 </div>
@@ -183,11 +103,11 @@
         </div>
     </section>
     {{--创业导师--}}
-    <section class="teacher" style="background: url('/images/teacherback.png')">
+    <section class="teacher" style="background: url('/images/teacherback.png') ">
         <div class="container">
             <div class="slogans center-block">
                 <img id="slogan_logo" src="/images/sloganw1.png" alt="">
-                <h5 style="color: white">ADASFSDFDSFSdsadasD</h5>
+                <h5 style="color: white">BUSINESS MENTOR ACADEMIC MASTERS</h5>
                 <h4 style="color: white">云创谷创业创业导师/学术大咖</h4>
                 <img class="center-block" id="slogan_line" src="/images/sloganw2.png" alt="">
             </div>
@@ -196,116 +116,48 @@
             <div id="teacher-carousel" style="margin-top: 10px" class="carousel slide">
                 <!-- Carousel items -->
                 <div class="carousel-inner">
-                    <div class="active item  " style="">
+                    @foreach($teachers->chunk(4) as $key=>$row)
+                        @if($key == 0)
+                            <div class="active item  " style="">
+                                <div class="row">
+                                    @foreach($row as $teacher)
+                                        <div class="col-sm-6 col-md-3">
+                                            <div class="thumbnail teacher-item">
+                                                <img src="{{$teacher->avatar}}">
+                                                <div class="caption" style="overflow: hidden;height: 200px">
+                                                    <h3>{{$teacher->name}} </h3>
+                                                    <h3><span >{{$teacher->job}}</span></h3>
+                                                    <h5>{{$teacher->e_name}} </h5>
+                                                    <p>{{$teacher->desrc}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                        <div class="row">
-                            <div class="col-sm-6 col-md-3">
-                                <div class="thumbnail teacher-item">
-                                    <img src="/images/teacher1.png">
-                                    <div class="caption">
-                                        <h3>Thumbnail label <span>name</span></h3>
-                                        <h5>Thumbnail </h5>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit
-                                            non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies
-                                            vehicula ut id elit.</p>
-                                    </div>
+                                    @endforeach
                                 </div>
+                                <div class="col-sm-12" style="height: 68px"></div>
                             </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="thumbnail teacher-item">
-                                    <img src="/images/teacher1.png">
-                                    <div class="caption">
-                                        <h3>Thumbnail label <span>name</span></h3>
-                                        <h5>Thumbnail </h5>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit
-                                            non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies
-                                            vehicula ut id elit.</p>
-                                    </div>
+                        @else
+                            <div class="item">
+                                <div class="row">
+                                    @foreach($row as $teacher)
+                                        <div class="col-sm-6 col-md-3">
+                                            <div class="thumbnail teacher-item">
+                                                <img src="{{$teacher->avatar}}">
+                                                <div class="caption" style="overflow: hidden;height: 200px">
+                                                    <h3>{{$teacher->name}} </h3>
+                                                    <h3><span >{{$teacher->job}}</span></h3>
+                                                    <h5>{{$teacher->e_name}} </h5>
+                                                    <p>{{$teacher->desrc}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
                                 </div>
+                                <div class="col-sm-12" style="height: 68px"></div>
                             </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="thumbnail teacher-item">
-                                    <img src="/images/teacher1.png">
-                                    <div class="caption">
-                                        <h3>Thumbnail label <span>name</span></h3>
-                                        <h5>Thumbnail </h5>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit
-                                            non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies
-                                            vehicula ut id elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="thumbnail teacher-item">
-                                    <img src="/images/teacher1.png">
-                                    <div class="caption">
-                                        <h3>Thumbnail label <span>name</span></h3>
-                                        <h5>Thumbnail </h5>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit
-                                            non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies
-                                            vehicula ut id elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-sm-12" style="height: 68px"></div>
-                    </div>
-                    <div class="item">
-
-                        <div class="row">
-                            <div class="col-sm-6 col-md-3">
-                                <div class="thumbnail teacher-item">
-                                    <img src="/images/teacher1.png">
-                                    <div class="caption">
-                                        <h3>Thumbnail label <span>name</span></h3>
-                                        <h5>Thumbnail </h5>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit
-                                            non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies
-                                            vehicula ut id elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="thumbnail teacher-item">
-                                    <img src="/images/teacher1.png">
-                                    <div class="caption">
-                                        <h3>Thumbnail label <span>name</span></h3>
-                                        <h5>Thumbnail </h5>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit
-                                            non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies
-                                            vehicula ut id elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="thumbnail teacher-item">
-                                    <img src="/images/teacher1.png">
-                                    <div class="caption">
-                                        <h3>Thumbnail label <span>name</span></h3>
-                                        <h5>Thumbnail </h5>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit
-                                            non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies
-                                            vehicula ut id elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="thumbnail teacher-item">
-                                    <img src="/images/teacher1.png">
-                                    <div class="caption">
-                                        <h3>Thumbnail label <span>name</span></h3>
-                                        <h5>Thumbnail </h5>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit
-                                            non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies
-                                            vehicula ut id elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12" style="height: 68px"></div>
-                    </div>
+                        @endif
+                    @endforeach
                     <ol class="carousel-indicators">
                         <li data-target="#teacher-carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#teacher-carousel" data-slide-to="1"></li>
@@ -319,36 +171,21 @@
         <div class="container">
             <div class="slogans center-block">
                 <img id="slogan_logo" src="/images/slogan2.png" alt="">
-                <h5>ADASFSDFDSFSdsadasD</h5>
+                <h5>ENTREPRENEURS DISPLAY SPACE</h5>
                 <h4>云创谷创业空间展示</h4>
                 <img class="center-block" id="slogan_line" src="/images/slogan1.png" alt="">
             </div>
-            <div class="col-sm-12 ">
-                <div class="col-sm-4 area-item">
-                    <img src="/images/area1.png" alt="">
-                    <div class="area-item-title">
-                        <h1>杭州地区</h1>
-                        <h5>The Hangzhou</h5>
-                        <h4>大大声点地方第三方第三方的</h4>
-                    </div>
-                </div>
-                <div class="col-sm-4 area-item">
-                    <img src="/images/area1.png" alt="">
-                    <div class="area-item-title">
-                        <h1>杭州地区</h1>
-                        <h5>The Hangzhou</h5>
-                        <h4>大大声点地方第三方第三方的</h4>
-                    </div>
-                </div>
-                <div class="col-sm-4 area-item">
-                    <img src="/images/area1.png" alt="">
-                    <div class="area-item-title">
-                        <h1>杭州地区</h1>
-                        <h5>The Hangzhou</h5>
-                        <h4>大大声点地方第三方第三方的</h4>
-                    </div>
-                </div>
+            <div class="area-container ">
+                @foreach($areas as $area)
+                    <div class="area-item">
+                        <img src="{{$area->imgsrc}}" alt="">
+                        <div class="area-item-title">
+                            <h1>{{$area->name}}</h1>
 
+                            <h4>{{$area->address}}</h4>
+                        </div>
+                    </div>
+                @endforeach
             </div>
 
         </div>
@@ -360,51 +197,36 @@
         <div class="container">
             <div class="slogans center-block">
                 <img id="slogan_logo" src="/images/slogan2.png" alt="">
-                <h5>ADASFSDFDSFSdsadasD</h5>
+                <h5>ENTREPRENEUR EVENT TIMEKINE </h5>
                 <h4>云创谷创业大事记</h4>
                 <img class="center-block" id="slogan_line" src="/images/slogan1.png" alt="">
             </div>
-            {{--<div>--}}
-            {{--<img id="event_line" src="/images/line.png" alt="">--}}
-            {{--</div>--}}
+            <div>
+                <img id="event_line" src="/images/line.png" alt="">
+            </div>
             <div class="event-container">
-                <div class="main-event-right animated">
-                    <img src="/images/event_pic1.png" alt="">
-                    <div class="event-desrc">
-                        <span>2016 9 3</span>
-                        <p>大大技术来开发很舒服的大大技术来开发很舒服的会计部分操作会计部分操作</p>
-                    </div>
-                    <div style="clear: both"></div>
-                </div>
-                <div class="main-event-left animated">
-                    <img src="/images/event_pic1.png" alt="">
-                    <span>2016 9 3</span>
+                @foreach($events as $key => $event)
+                    @if($key%2 == 0)
+                        <div class="main-event-right animated">
+                            <img src="{{$event->imgsrc}}" alt="">
+                            <div class="event-desrc">
+                                <span>{{$event->time}}</span>
+                                <p>{{$event->detail}}</p>
+                            </div>
+                            <div style="clear: both"></div>
+                        </div>
+                    @else
+                        <div class="main-event-left animated">
+                            <img src="{{$event->imgsrc}}" alt="">
+                            <div class="event-desrc">
+                                <span>{{$event->time}}</span>
+                                <p>{{$event->detail}}</p>
+                            </div>
+                            <div style="clear: both"></div>
+                        </div>
+                    @endif
 
-                    <p>大大技术来开发很舒服的会计部分操作大大技术来开发很舒服的会计部分操作</p>
-                    <div style="clear: both"></div>
-                </div>
-                <div class="main-event-right animated">
-                    <img src="/images/event_pic1.png" alt="">
-                    <div class="event-desrc">
-                        <span>2016 9 3</span>
-                        <p>大大技术来开发很舒服的大大技术来开发很舒服的会计部分操作会计部分操作</p>
-                    </div>
-                    <div style="clear: both"></div>
-                </div>
-                <div class="main-event-left animated">
-                    <img src="/images/event_pic1.png" alt="">
-                    <span>2016 9 3</span>
-                    <p>大大技术来开发很舒服的会计部分操作大大技术来开发很舒服的会计部分操作</p>
-                    <div style="clear: both"></div>
-                </div>
-                <div class="main-event-right animated">
-                    <img src="/images/event_pic1.png" alt="">
-                    <div class="event-desrc">
-                        <span>2016 9 3</span>
-                        <p>大大技术来开发很舒服的大大技术来开发很舒服的会计部分操作会计部分操作</p>
-                    </div>
-                    <div style="clear: both"></div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -413,23 +235,14 @@
         <div class="container">
             <div class="slogans center-block">
                 <img id="slogan_logo" src="/images/slogan2.png" alt="">
-                <h5>ADASFSDFDSFSdsadasD</h5>
+                <h5>VENTURE PARTNERS</h5>
                 <h4>云创谷创业合作伙伴</h4>
                 <img class="center-block" id="slogan_line" src="/images/slogan1.png" alt="">
             </div>
-            <div class="col-sm-10 col-sm-offset-1 partner_logo_items">
-                <div class="col-sm-2 col-xs-3 partner_logo_item"><img src="/images/p_logo.png" alt=""></div>
-                <div class="col-sm-2 col-xs-3 partner_logo_item "><img src="/images/p_logo.png" alt=""></div>
-                <div class="col-sm-2 col-xs-3 partner_logo_item "><img src="/images/p_logo.png" alt=""></div>
-                <div class="col-sm-2 col-xs-3 partner_logo_item "><img src="/images/p_logo.png" alt=""></div>
-                <div class="col-sm-2 col-xs-3 partner_logo_item "><img src="/images/p_logo.png" alt=""></div>
-                <div class="col-sm-2 col-xs-3 partner_logo_item "><img src="/images/p_logo.png" alt=""></div>
-                <div class="col-sm-2 col-xs-3 partner_logo_item "><img src="/images/p_logo.png" alt=""></div>
-                <div class="col-sm-2 col-xs-3 partner_logo_item "><img src="/images/p_logo.png" alt=""></div>
-                <div class="col-sm-2 col-xs-3 partner_logo_item "><img src="/images/p_logo.png" alt=""></div>
-                <div class="col-sm-2 col-xs-3 partner_logo_item "><img src="/images/p_logo.png" alt=""></div>
-                <div class="col-sm-2 col-xs-3 partner_logo_item "><img src="/images/p_logo.png" alt=""></div>
-                <div class="col-sm-2 col-xs-3 partner_logo_item "><img src="/images/p_logo.png" alt=""></div>
+            <div class="col-sm-12  partner_logo_items">
+                @foreach($partners as $partner)
+                    <div class="col-sm-2 col-xs-3 partner_logo_item"><img src="{{$partner->imgsrc}}" alt=""></div>
+                @endforeach
             </div>
         </div>
 
