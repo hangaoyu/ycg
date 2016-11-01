@@ -13,6 +13,7 @@
   - 支付页面。
   - 详情页。
   - 移动端UI
+  
 ###composer包
  - spatie/laravel-pjax pjax加载页面
  - acacha/admin-lte-template-laravel 后台adminlte框架
