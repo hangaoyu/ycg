@@ -34,18 +34,12 @@ desired effect
 |---------------------------------------------------------|
 -->
 <body class="skin-blue sidebar-mini">
-
 <div class="wrapper" id="app">
-
     @include('layouts.partials.mainheader')
-
     @include('layouts.partials.sidebar')
-
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-
+    <div class="content-wrapper" style="height: 1800px">
         @include('layouts.partials.contentheader')
-
         <!-- Main content -->
         <section class="content" >
             <div class="main-content" id="pjax-container">
@@ -54,11 +48,8 @@ desired effect
             </div>
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
-
     @include('layouts.partials.controlsidebar')
-
     @include('layouts.partials.footer')
-
 </div><!-- ./wrapper -->
 <script src="/js/admin.js" ></script>
 <script src="{{ asset('/js/jquery.form.js') }}" type="text/javascript"></script>
@@ -66,7 +57,6 @@ desired effect
 <script src="{{ asset('/js/app.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('/js/dcalendar_picker.js') }}" type="text/javascript"></script>
 <script type="text/javascript">
-
     $('#mydatepicker2').dcalendarpicker({
         format:'yyyy-mm-dd'
     });

@@ -1,33 +1,25 @@
 <nav>
     <div class="top">
         {{--<div class="top-line"></div>--}}
-        <div class="header" style="background-color: white">
+        <div class="header" style="background-color: white;position: relative">
+
+            <div class="header-logo" style="position: absolute;left: 30%;width: 20%"><img src="/images/head_logo.png" alt=""></div>
+            <div class="header-logo" style="position: absolute;left: 50%;width: 20%"><img  src="/images/head_logo1.png" alt=""></div>
             @if(Auth::check()&&Auth::user()->type ==='user' )
-
-                    <div class="header-btn has_login">{{Auth::user()->name}}</div>
-
+                <div class="header-btn has_login">{{Auth::user()->name}}</div>
             @else
                 <div class="header-btn">
+                        {{--<div class="header-logo"><img src="/images/head_logo1.png" alt=""></div>--}}
                     <div data-toggle="modal" id="sign-in-btn" data-target="#myModal" class="login-btn">
                         登录
                     </div>
+                    <span> &nbsp;|</span>
                     <div data-toggle="modal" id="sign-up-btn" data-target="#myModal" class="login-btn">
-                        注册
+                       注册
                     </div>
                 </div>
             @endif
-            {{--<div class="header-logo"><img src="/images/head_logo.png" alt=""></div>--}}
-            {{--<div class= header-logo"><img src="/images/head_logo1.png" alt=""></div>--}}
-
         </div>
-
-        <!-- 模态框（Modal） -->
-
-
-        {{--<div class="login-modal">--}}
-        {{--asdas--}}
-        {{--</div>--}}
-
         <div style="background-color: #f0f1f2"><!-- Left Side Of Navbar -->
             <ul class="nav-menu pjax">
                 <li><a href="{{ url('/') }}">HOME <p>首页</p></a></li>
@@ -48,4 +40,5 @@
             <!-- Right Side Of Navbar -->
         </div>
     </div>
+
 </nav>

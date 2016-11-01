@@ -45,13 +45,12 @@ class EventController extends Controller
 
     public function change_avatar(Request $request)
     {
-
+     
         $destinationPath = '/storage/';
         $filename = request()->file('avatar')->store('logo', 'public');
         $avatar = asset($destinationPath . $filename);
         $event = \App\Timeline::where('id', $request->get('id'))->first();
         $event->imgsrc = $avatar;
-
         if ($event->update()) {
             return \Response::json([
                 'success' => true,

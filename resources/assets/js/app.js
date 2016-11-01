@@ -4,9 +4,9 @@
  * include Vue and Vue Resource. This gives a great starting point for
  * building robust, powerful web applications using Vue and Laravel.
  */
-
+window.$ = window.jQuery = require('jquery');
 require('./bootstrap');
-
+require('./base');
 // //... some vue component imports ...
 
 

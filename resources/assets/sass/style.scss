@@ -1,17 +1,43 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css);
+@import url(http://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css);
+// Variables
+@import "variables";
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 body {
   background-color: white;
 
 }
+
 @media (max-width: 1000px) {
-  body{
-    width:1500px;
+  body {
+    width: 1500px;
     margin: 0 auto;
   }
 
 }
 
+body {
+  font-family: "Microsoft YaHei" ! important;
+}
 
+@media (max-width: 1000px) {
+  .result-item {
+    font-size: 50%;
+  }
+  .teacher {
+    display: none;
+  }
+  .area {
+    display: none;
+  }
+  //.result-scroll {
+  //  display: none;
+  //}
+}
 
 //modal padding-right抖动
 body.modal-open {
@@ -257,7 +283,7 @@ body.modal-open[style] {
   width: 100%;
   z-index: 999;
   //top: -100px;
-  top: 10px;
+  //top: 10px;
   position: fixed;
   .top-line {
     transition: all 0.5s;
@@ -292,16 +318,19 @@ body.modal-open[style] {
   .header-btn {
     margin-top: 30px;
     height: 40px;
-    width: 120px;
+    width: 125px;
     float: left;
     margin-left: 80%;
     display: inline-block;
     box-shadow: 0px 0px 0px 1px #e8e6e6;
     border-radius: 5px;
+    span {
+      color: lightgrey;
+    }
     .login-btn {
 
       line-height: 40px;
-      margin-left: 14px;
+      margin-left: 10px;
       text-align: center;
       color: black;
       display: inline-block;
@@ -313,10 +342,12 @@ body.modal-open[style] {
     }
 
   }
-  .has_login{
-    border: none;box-shadow: none;text-align: center
+  .has_login {
+    border: none;
+    box-shadow: none;
+    text-align: center
   }
-  .user{
+  .user {
     float: right;
   }
 }
@@ -383,15 +414,6 @@ body.modal-open[style] {
 
 }
 
-@media (max-width: 1000px) {
-  .result-item {
-    font-size: 50%;
-  }
-  .teacher {
-    display: none;
-  }
-}
-
 p {
   text-align: center;
   overflow: hidden;
@@ -438,7 +460,6 @@ p {
 .home-banner {
 
   width: 100%;
-
   margin-top: 160px;
   height: 60%;
   //height: 662px;
@@ -527,80 +548,148 @@ p {
 
 //成果展示
 .results {
+  //position: relative;
+
+  width: 1180px;
+  margin: 0 auto;
   .result-scroll {
-    width: 1200px;
+    width: 1190px;
     margin: 0 auto;
-    background-color: #00b3ee;
     .result-scroll-img {
-      width: 180px;
+      width: 120px;
+      height: 30px;
       margin: 0 auto;
-    }
-
-  }
-  .result-item {
-    position: relative;
-    width: 224px;
-    height: 172px;
-    margin-left: 55px;
-    display: inline-block;
-    margin-bottom: 56px;
-    box-shadow: 1px 1px 3px 3px #e8e6e6;
-    transition: all 0.5s;
-    -moz-transition: all 0.5s; /* Firefox 4 */
-    -webkit-transition: all 0.5s; /* Safari and Chrome */
-    -o-transition: all 0.5s;
-    overflow: hidden;
-    a {
-      color: black;
-    }
-    img {
-      width: 224px;
-      height: 190px;
-    }
-    .result-item-title {
-      position: absolute;
-      background-color: white;
-      width: 100%;
-      z-index: 10;
-      height: 40px;
-      bottom: 0px;
-      line-height: 40px;
-      font-weight: 100;
-      text-align: center;
-      font-size: 100%;;
-      color: #333333;
-      #result-line {
-        transition: all 0.5s;
-        -moz-transition: all 0.5s; /* Firefox 4 */
-        -webkit-transition: all 0.5s; /* Safari and Chrome */
-        -o-transition: all 0.5s;
-        width: 0%;
-        height: 2px;
-        background-color: #00b3ee;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: center;
+      .more {
+        margin-top: -8px
       }
+      .arrow {
 
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        margin: 0 auto;
+        background: #6a398c;
+        #r_top {
+          margin-left: 10px;
+          margin-top: 5px;
+          transition: all 0.5s;
+          -moz-transition: all 0.5s; /* Firefox 4 */
+          -webkit-transition: all 0.5s; /* Safari and Chrome */
+          -o-transition: all 0.5s;
+          &:hover {
+
+            transform: rotate(90deg);
+            -ms-transform: rotate(90deg); /* IE 9 */
+            -moz-transform: rotate(90deg); /* Firefox */
+            -webkit-transform: rotate(90deg); /* Safari 和 Chrome */
+            -o-transform: rotate(90deg);
+
+          }
+        }
+        #r_down {
+          margin-left: 10px;
+          margin-top: 5px;
+          transition: all 0.5s;
+          -moz-transition: all 0.5s; /* Firefox 4 */
+          -webkit-transition: all 0.5s; /* Safari and Chrome */
+          -o-transition: all 0.5s;
+          &:hover {
+
+            transform: rotate(90deg);
+            -ms-transform: rotate(90deg); /* IE 9 */
+            -moz-transform: rotate(90deg); /* Firefox */
+            -webkit-transform: rotate(90deg); /* Safari 和 Chrome */
+            -o-transform: rotate(90deg);
+
+          }
+        }
+
+      }
     }
-    .result-item-word {
-      padding: 5px;
+  }
+  .result-container {
+    width: 1300px;
+    height: 520px;
+    overflow: hidden;
+
+    position: relative;
+    .result-items {
+      padding-top: 10px;
+
       transition: all 0.5s;
       -moz-transition: all 0.5s; /* Firefox 4 */
       -webkit-transition: all 0.5s; /* Safari and Chrome */
       -o-transition: all 0.5s;
-      position: absolute;
-      width: 100%;
-      top: 190px;
-      background-color: white;
-      height: 140px;
+      margin-top: 20px;
+      .result-item {
+        position: relative;
+        width: 224px;
+        height: 200px;
+        margin-left: 55px;
+        display: inline-block;
+        margin-bottom: 56px;
+        box-shadow: 1px 1px 3px 3px #e8e6e6;
+        transition: all 0.5s;
+        -moz-transition: all 0.5s; /* Firefox 4 */
+        -webkit-transition: all 0.5s; /* Safari and Chrome */
+        -o-transition: all 0.5s;
+        overflow: hidden;
+        a {
+          color: black;
+        }
+        img {
+          width: 224px;
+          height: 190px;
+        }
+        .result-item-title {
+          position: absolute;
+          background-color: white;
+          width: 100%;
+          z-index: 10;
+          height: 40px;
+          bottom: 0px;
+          line-height: 40px;
+          font-weight: 100;
+          text-align: center;
+          font-size: 100%;;
+          color: #333333;
+          #result-line {
+            transition: all 0.5s;
+            -moz-transition: all 0.5s; /* Firefox 4 */
+            -webkit-transition: all 0.5s; /* Safari and Chrome */
+            -o-transition: all 0.5s;
+            width: 0%;
+            height: 2px;
+            background-color: #00b3ee;
+          }
 
-    }
+        }
+        .result-item-word {
+          padding: 5px;
+          transition: all 0.5s;
+          -moz-transition: all 0.5s; /* Firefox 4 */
+          -webkit-transition: all 0.5s; /* Safari and Chrome */
+          -o-transition: all 0.5s;
+          position: absolute;
+          width: 100%;
+          top: 190px;
+          background-color: white;
+          height: 140px;
+        }
 
-    &:hover {
-      .result-item-word {
-        opacity: 0.98;
-        top: 40px;
-      }
-      #result-line {
-        width: 100%;
+        &:hover {
+          .result-item-word {
+            opacity: 0.98;
+            top: 40px;
+          }
+          #result-line {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -609,31 +698,41 @@ p {
 //融资信息
 .news {
   .container-fluid {
-    width: 1200px;
+    width: 1220px;
     margin: 0 auto;
   }
 
   .news-finance {
+
     margin-right: 30px;
     display: inline-block;
-    width: 800px;
+    width: 820px;
+    height: 670px;
+    overflow: hidden;
+    .finance-scroll-container{
+
+      transition: all 1s;
+      -moz-transition: all 1s; /* Firefox 4 */
+      -webkit-transition: all 1s; /* Safari and Chrome */
+      -o-transition: all 1s;
+    }
     .finance-item {
+      margin: 10px auto 0px;
       width: 800px;
       height: 188px;
       box-shadow: 0px 0px 5px #e8e6e6;
       margin-bottom: 36px;
-      padding: 1%;
+      padding: 2%;
       .finance_img {
         float: left;
         width: 220px;
-        height: 160px;
+        height: 188px;
         img {
           width: 100%;
         }
       }
       .finance-desrc {
         position: relative;
-
         float: left;
         margin-left: 20px;
         width: 510px;
@@ -680,8 +779,24 @@ p {
 
     h1 {
       text-align: center;
+
       font-size: 24px;
       color: #333333;
+    }
+    .dynamic-items {
+
+      height: 570px;
+      overflow: hidden;
+    }
+    .dynamic-items-scroll {
+
+      margin-top: 0px;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      transition: all 9s;
+      -moz-transition: all 9s; /* Firefox 4 */
+      -webkit-transition: all 9s; /* Safari and Chrome */
+      -o-transition: all 9s;
     }
     .dynamic-item {
       margin-top: 20px;
@@ -689,18 +804,19 @@ p {
         margin: 0 20px;
         font-weight: 200;
         height: 40px;
+        text-align: left;
         font-size: 18px;
         line-height: 20px;
         color: #666666;
       }
       #dynamic-from {
-        margin: 16px 20px 0px;
-
+        margin: 16px 20px 0px 20px;
         font-size: 12px;
-        color: #d7be8e;
+        color: #999999;
         span {
+          color: #d7be8e;
           margin-right: 18px;
-          color: #999999;
+
         }
       }
     }
@@ -716,6 +832,64 @@ p {
         color: white;
       }
 
+    }
+  }
+
+  .finance-scroll {
+    width: 400px;
+    margin: 0 auto;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    .left_arrow {
+      margin-right: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      background-color: #6a398c;
+      img {
+        margin-left: 15px;
+        margin-top: 10px;
+        transition: all 0.5s;
+        -moz-transition: all 0.5s; /* Firefox 4 */
+        -webkit-transition: all 0.5s; /* Safari and Chrome */
+        -o-transition: all 0.5s;
+      }
+      &:hover {
+        img {
+          transform: rotate(90deg);
+          -ms-transform: rotate(90deg); /* IE 9 */
+          -moz-transform: rotate(90deg); /* Firefox */
+          -webkit-transform: rotate(90deg); /* Safari 和 Chrome */
+          -o-transform: rotate(90deg);
+        }
+      }
+    }
+    .right_arrow {
+      margin-right: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      background-color: #6a398c;
+      img {
+        margin-left: 15px;
+        margin-top: 10px;
+        transition: all 0.5s;
+        -moz-transition: all 0.5s; /* Firefox 4 */
+        -webkit-transition: all 0.5s; /* Safari and Chrome */
+        -o-transition: all 0.5s;
+      }
+      &:hover {
+        img {
+          transform: rotate(90deg);
+          -ms-transform: rotate(90deg); /* IE 9 */
+          -moz-transform: rotate(90deg); /* Firefox */
+          -webkit-transform: rotate(90deg); /* Safari 和 Chrome */
+          -o-transform: rotate(90deg);
+        }
+      }
     }
   }
 }
@@ -757,12 +931,12 @@ p {
 
       img {
         width: 100%;
-        height: 120%;
+        height: 187px;
         display: block;
       }
       .caption {
         margin-top: -20px;
-        height: 200px;
+        height: 250px;
         overflow: hidden;
         h3 {
           text-align: center;
@@ -797,10 +971,8 @@ p {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-
     justify-content: center;
     .area-item {
-
       width: 400px;
       img {
         margin-left: 80px;
@@ -840,72 +1012,90 @@ p {
   height: 1140px;
   #event_line {
     position: absolute;
+    z-index: 10;
     left: 50%;
 
   }
   .event-container {
     position: relative;
-    .main-event-left {
-      opacity: 0;
-      transition: all 2s;
-      -moz-transition: all 2s; /* Firefox 4 */
-      -webkit-transition: all 2s; /* Safari and Chrome */
-      -o-transition: all 2s;
-      background-color: white;
-      border-radius: 5px;
-      box-shadow: 0 0 3px #e8e6e6;
-      width: 500px;
-      img {
-        float: right;
-        width: 230px;
-        height: 160px;
+    width: 1100px;
+    margin: 0 auto;
+    height: 815px;
+    overflow: hidden;
+    .event-scroll {
+      margin-top: 0px;
+      animation-timing-function: linear;
+      -webkit-animation-timing-function: linear;
+      transition: all 6s;
+      -moz-transition: all 6s; /* Firefox 4 */
+      -webkit-transition: all 6s; /* Safari and Chrome */
+      -o-transition: all 6s;
+      .main-event-left {
+        opacity: 1;
+        transition: all 2s;
+        -moz-transition: all 2s; /* Firefox 4 */
+        -webkit-transition: all 2s; /* Safari and Chrome */
+        -o-transition: all 2s;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 3px #e8e6e6;
+        width: 500px;
+        img {
+          float: right;
+          width: 230px;
+          height: 160px;
 
+        }
+        span {
+          text-align: right;
+          margin-right: 20px;
+          width: 200px;
+          float: right;
+          font-size: 20px;
+          color: #333333;
+        }
+        p {
+          text-align: left;
+          text-indent: 2em;
+          margin-right: 20px;
+          font-size: 14px;
+          color: #999999;
+          width: 250px;
+          float: right;
+        }
       }
-      span {
-        text-align: right;
-        margin-right: 20px;
-        width: 200px;
-        float: right;
-        font-size: 20px;
-        color: #333333;
-      }
-      p {
-        text-align: right;
-        margin-right: 20px;
-        font-size: 14px;
-        color: #999999;
-        width: 250px;
-        float: right;
+      .main-event-right {
+        opacity: 1;
+        transition: 2s;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 3px #e8e6e6;
+        width: 500px;
+        margin-left: 600px;
+        img {
+          float: left;
+          width: 230px;
+          height: 160px;
+        }
+        span {
+          margin-left: 20px;
+          width: 200px;
+          float: left;
+          font-size: 20px;
+          color: #333333;
+        }
+        p {
+          font-size: 14px;
+          color: #999999;
+          margin-left: 20px;
+          width: 250px;
+          float: left;
+          text-indent: 2em;
+          text-align: left;
+        }
       }
     }
-    .main-event-right {
-      opacity: 0;
-      transition: 2s;
-      background-color: white;
-      border-radius: 5px;
-      box-shadow: 0 0 3px #e8e6e6;
-      width: 500px;
-      margin-left: 600px;
-      img {
-        float: left;
-        width: 230px;
-        height: 160px;
-      }
-      span {
-        margin-left: 20px;
-        width: 200px;
-        float: left;
-        font-size: 20px;
-        color: #333333;
-      }
-      p {
-        font-size: 14px;
-        color: #999999;
-        margin-left: 20px;
-        width: 250px;
-        float: left;
-      }
-    }
+
   }
 }
 
@@ -915,9 +1105,22 @@ p {
   margin-bottom: 54px;
   .partner_logo_item {
     border: solid 1px #e1e1e1;
+    overflow: hidden;
     img {
+      transition: all 0.5s;
+      -moz-transition: all 0.5s; /* Firefox 4 */
+      -webkit-transition: all 0.5s; /* Safari and Chrome */
+      -o-transition: all 0.5s;
       width: 100%;
       height: 100%;
+    }
+    &:hover {
+      border-color: purple;
+      img {
+        -webkit-transform: scale(1.1, 1.1);
+        -moz-transform: scale(1.1, 1.1);
+        -transform: scale(1.1, 1.1);
+      }
     }
 
   }

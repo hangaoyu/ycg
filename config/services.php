@@ -39,6 +39,11 @@ return [
         'client_secret' => env('WEIBO_CLIENT_SECRET'),
         'redirect' => env('WEIBO_CLIENT_REDIRECT'),
     ],
+    'qq' => [
+        'client_id' => env('QQ_CLIENT_ID'),
+        'client_secret' => env('QQ_CLIENT_SECRET'),
+        'redirect' => env('QQ_CLIENT_REDIRECT'),
+    ],
 
 
 ];

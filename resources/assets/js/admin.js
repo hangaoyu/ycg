@@ -25,6 +25,10 @@ Vue.component('projectprocess', require('./components/ProjectProcess.vue'));
 Vue.component('deletebtn', require('./components/DeleteButton.vue'));
 Vue.component('projectsearchbar', require('./components/ProjectSearchBar.vue'));
 Vue.component('carousel', require('./components/Carousel.vue'));
+Vue.component('dynamictable', require('./components/DynamicTable.vue'));
+Vue.component('publicitemdetail', require('./components/PublicItemDetail.vue'));
+Vue.component('publictype', require('./components/PublicType.vue'));
+Vue.component('activity', require('./components/Activity.vue'));
 const app = new Vue({
     el: '#app'
 });

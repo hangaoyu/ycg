@@ -19,7 +19,7 @@
                     <div class="area-body">
                         <div class="col-sm-4">
                             <div class="text-center">
-                                <img alt="image" style="width: 104px;height: 104px" class="img-circle m-t-xs img-responsive" src="{{$area->imgsrc}}">
+                                <img alt="image" style="width: 100%" class="img-circle m-t-xs img-responsive" src="{{$area->imgsrc}}">
                                 {{--<div class="m-t-xs font-bold">Graphics designer</div>--}}
                             </div>
                         </div>

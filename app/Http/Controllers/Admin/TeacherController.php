@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Markdown\Markdown;
 use App\Teacher;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -9,6 +10,12 @@ use App\Http\Requests;
 
 class TeacherController extends Controller
 {
+    public function __construct(Markdown $markdown)
+    {
+        $this->makedown = $markdown;
+        $this->middleware('auth');
+    }
+
     public function index()
     {
 
@@ -71,9 +78,8 @@ class TeacherController extends Controller
             'desrc' => 'required',
             'job' => 'required',
             'body' => 'required',
-
-
         ]);
+        
         $teacher = Teacher::findorfail($id);
         $teacher->update($request->all());
         return back()->with('success', '修改成功');

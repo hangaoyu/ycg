@@ -2,14 +2,6 @@ window.onscroll = function () {
 
     var t = $(window).scrollTop();
 
-
-    // var totalheight = $(document).height();
-    // var totalweight = document.body.scrollWidth;
-    // console.log(totalweight);
-    // var line_width = (t / totalheight) * 1.2 * totalweight;
-    // // console.log(line_width);
-    // $('.top-line').css({width: line_width});
-    // // console.log(t);
     //导航栏
     var top = $('.top');
     if (t >= 160) {
@@ -68,14 +60,14 @@ window.onscroll = function () {
         eventright.addClass('fadeInRight');
         eventright.css({opacity: 1});
     }
-    var meventleft = $('.main-event-left');
-    var meventright = $('.main-event-right');
-    if (t >= 4000) {
-        meventleft.addClass('fadeInLeft');
-        meventleft.css({opacity: 1});
-        meventright.addClass('fadeInRight');
-        meventright.css({opacity: 1});
-    }
+    // var meventleft = $('.main-event-left');
+    // var meventright = $('.main-event-right');
+    // if (t >= 4000) {
+    //     meventleft.addClass('fadeInLeft');
+    //     meventleft.css({opacity: 1});
+    //     meventright.addClass('fadeInRight');
+    //     meventright.css({opacity: 1});
+    // }
     if (t >= 0) {
         var entrepreneur_banner = $('.entrepreneur-banner-word');
         entrepreneur_banner.addClass('slideInLeft');
@@ -88,10 +80,29 @@ window.onscroll = function () {
         investor_banner_item_right.addClass('fadeInUp');
         investor_bannner_bottom.css({opacity: 1});
     }
+    if(t>=0){
+        $('#r_top').click(function () {
+            $('.result-items').css('margin-top',0);
+        });
+        $('#r_down').click(function () {
+            $('.result-items').css('margin-top',-240);
+        });
+        $('.left_arrow').click(function () {
+            $('.finance-scroll-container').css('margin-top',10);
+        });
+        $('.right_arrow').click(function () {
+            $('.finance-scroll-container').css('margin-top',-680);
+        });
+    }
 }
 
 
 $(function () {
+
+
+    var top = $('.top');
+    top.css({top: 0});
+
     //注册登录
     var sign_line = $('.sign-line');
 

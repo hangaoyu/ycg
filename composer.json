@@ -13,7 +13,8 @@
         "intervention/image": "^2.3",
         "yuanchao/laravel-5-markdown-editor": "dev-master",
         "symfony/finder": "^3.1",
-        "overtrue/laravel-socialite": "~1.0"
+        "overtrue/laravel-socialite": "~1.0",
+        "predis/predis": "^1.1"
 
     },
     "require-dev": {

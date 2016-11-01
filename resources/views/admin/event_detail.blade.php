@@ -13,7 +13,7 @@
                                 <img alt="image"  class="img-responsive project-image" id="teacher-avatar"
                                      src="{{$event->imgsrc}}">
                                 <div class="ibox-content logo-content">
-                                    {!! Form::open(['url'=>'/admin/area/avatar','files'=>true,'id'=>'avatar']) !!}
+                                    {!! Form::open(['url'=>'/admin/event/avatar','files'=>true,'id'=>'avatar']) !!}
                                     {!! Form::hidden('id',$event->id)!!}
                                     <div class="text-center">
                                         <button type="button" class="btn btn-primary avatar-button" id="upload-logo">

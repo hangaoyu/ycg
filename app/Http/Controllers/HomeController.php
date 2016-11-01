@@ -8,6 +8,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Markdown\Markdown;
 use Illuminate\Http\Request;
 
 /**
@@ -16,13 +17,15 @@ use Illuminate\Http\Request;
  */
 class HomeController extends Controller
 {
+  
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Markdown $markdown)
     {
+        $this->makedown = $markdown;
         $this->middleware('auth');
     }
 

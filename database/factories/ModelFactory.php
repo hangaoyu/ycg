@@ -175,3 +175,51 @@ $factory->define(App\Fund::class, function (Faker\Generator $faker) {
 
     ];
 });
+
+//融资信息
+$factory->define(App\Dynamic::class, function (Faker\Generator $faker) {
+
+    return [
+        'time' =>  $faker->word,
+        'title' => $faker->sentence,
+        'subtitle' => $faker->word,
+    ];
+});
+
+//公益活动
+$factory->define(App\WelfareItem::class, function (Faker\Generator $faker) {
+
+    $types = \App\WelfareType::pluck('id')->toArray();
+    return [
+        'title'=>$faker->sentence,
+        'at_where'=>$faker->word,
+        'time'=>$faker->word,
+        'type_id' =>  $faker->randomElement($types),
+        'img_src' => $faker->imageUrl(256, 256),
+        'desrc' => $faker->paragraph,
+        'address' => $faker->paragraph,
+        'qq'=>$faker->sentence,
+        'wx'=>$faker->sentence,
+        'sina'=>$faker->sentence,
+    ];
+});
+
+//创业活动
+$factory->define(App\ActivityItem::class, function (Faker\Generator $faker) {
+
+    $types = \App\ActivityType::pluck('id')->toArray();
+    return [
+        'type_id' =>  $faker->randomElement($types),
+        'img_src' => $faker->imageUrl(256, 256),
+        'big_img_src' => $faker->imageUrl(256, 256),
+        'title' => $faker->paragraph,
+        'address' => $faker->paragraph,
+        'time'=>$faker->sentence,
+        'desrc'=>$faker->sentence,
+        'process'=>$faker->sentence,
+        'contact'=>$faker->sentence,
+    ];
+});
+
+
+

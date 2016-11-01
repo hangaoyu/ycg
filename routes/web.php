@@ -1,5 +1,5 @@
 <?php
-
+//use Illuminate\Support\Facades\Redis;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,13 +17,15 @@ Route::get('/finance/{finance_id}', 'MainController@show_finance');
 Route::get('about', 'MainController@about');
 Route::get('investor', 'MainController@investor');
 
+//第三方登录
 Route::get('/weibo', 'UserController@weibo');
 Route::get('/weibo_back', 'UserController@weibo_back');
+Route::get('/qq', 'UserController@qq');
+Route::get('/qq_back', 'UserController@qq_back');
 
 Route::get('/entrepreneur', function () {
     return view('main.entrepreneur');
 });
-
 Route::get('/investor_hospital_detail', function () {
     return view('main.investor_hospital_detail');
 });
@@ -52,23 +54,21 @@ Route::get('/welfare_detail', function () {
 Route::get('/join', function () {
     return view('main.join');
 });
-Route::get('/test', function () {
-    $url="http://www.ebrun.com/qpd/62.html";
-    $fcontents=file_get_contents($url);
-    return $fcontents;
-});
+//Route::get('/test', function () {
+//    Redis::set('name','gy');
+//    return Redis::get('name');
+//});
 
 Route::get('/more_project', function () {
     return view('main.more_project');
 });
 
 
-
 Route::get('/home', 'HomeController@index');
 
 Auth::routes();
 
-Route::group(['middleware' => ['auth','admin'], 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
+Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
     //孵化项目
     Route::resource('project', 'ProjectController');
     Route::post('/project/logo', 'ProjectController@changelogo');
@@ -92,19 +92,19 @@ Route::group(['middleware' => ['auth','admin'], 'prefix' => 'admin', 'namespace'
     Route::post('/delete_project_process', 'ProjectController@deleteprocess');
     Route::post('/edit_project_process', 'ProjectController@editprocess');
     //轮播图
-    Route::get('/carousel','CarouselController@category');
-    Route::get('/get_file_list/{type_id}','CarouselController@getfilelist');
-    Route::get('/get_type_list','CarouselController@get_typelist');
-    Route::post('/add_carousel','CarouselController@addfile');
-    Route::post('/check_carousel','CarouselController@check_carousel');
-    Route::post('/delete_carousel','CarouselController@delete_carousel');
+    Route::get('/carousel', 'CarouselController@category');
+    Route::get('/get_file_list/{type_id}', 'CarouselController@getfilelist');
+    Route::get('/get_type_list', 'CarouselController@get_typelist');
+    Route::post('/add_carousel', 'CarouselController@addfile');
+    Route::post('/check_carousel', 'CarouselController@check_carousel');
+    Route::post('/delete_carousel', 'CarouselController@delete_carousel');
 
     Route::get('/test', function () {
         return view('admin.test');
     });
     //markdowm上传图片
-    Route::post('post/upload','PostController@upload');
-    Route::post('post/upload_img','PostController@upload_img');
+    Route::post('post/upload', 'PostController@upload');
+    Route::post('post/upload_img', 'PostController@upload_img');
     //导师信息
     Route::resource('teacher', 'TeacherController');
     Route::post('/teacher/avatar', 'TeacherController@change_avatar');
@@ -119,7 +119,28 @@ Route::group(['middleware' => ['auth','admin'], 'prefix' => 'admin', 'namespace'
     // 投资人
     Route::resource('investor', 'InvestorController');
     //爬虫
-    Route::get('/crawl','CrawlController@crawl');
+    Route::get('/crawl', 'CrawlController@crawl');
+    //融资信息
+    Route::get('dynamic', 'DynamicController@index');
+    Route::get('dynamic_list', 'DynamicController@dynamic_list');
+    Route::post('/delete_dynamic', 'DynamicController@delete_dynamic');
+    Route::post('/edit_dynamic', 'DynamicController@edit_dynamic');
+    Route::post('/add_dynamic', 'DynamicController@add_dynamic');
+    //公益活动
+    Route::resource('publicwelfare', 'PublicWelfareController');
+    Route::post('/publicwelfare/avatar', 'PublicWelfareController@change_avatar');
+    Route::get('public_type', 'PublicWelfareController@type_list');
+    Route::get('public_items/{type_id}', 'PublicWelfareController@item_list');
+    Route::post('public_delete_item', 'PublicWelfareController@delete_item');
+    Route::get('public_item_detail/{id}', 'PublicWelfareController@item_detail');
+  
+    //创业活动
+    Route::resource('activity', 'ActivityController');
+    Route::post('/activity/avatar', 'ActivityController@change_avatar');
+    Route::get('activity_type', 'ActivityController@type_list');
+    Route::get('activity_items/{type_id}', 'ActivityController@item_list');
+    Route::post('activity_delete_item', 'ActivityController@delete_item');
+    Route::get('activity_item_detail/{id}', 'ActivityController@item_detail');
 
 });
 Route::post('/discussions', function () {

@@ -1,8 +1,6 @@
 <template>
     <div class="container">
-
         <div class="wrapper wrapper-content">
-
             <div class="row">
                 <div class="col-lg-3">
                     <div class="ibox float-e-margins">
@@ -172,6 +170,7 @@
                     let url = 'delete_carousel/';
                     this.$http.post(url, file).then(function (response) {
 //                        // 響應成功回調
+
                         console.log(response);
                     }, function (response) {
                         console.log(response);

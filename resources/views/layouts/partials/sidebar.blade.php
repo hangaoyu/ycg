@@ -1,9 +1,7 @@
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
-
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-
         <!-- Sidebar user panel (optional) -->
         @if (! Auth::guest())
             <div class="user-panel">
@@ -17,7 +15,6 @@
                 </div>
             </div>
         @endif
-
         <!-- search form (Optional) -->
         <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
@@ -28,18 +25,20 @@
             </div>
         </form>
         <!-- /.search form -->
-
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
             <li class="header">{{ trans('adminlte_lang::message.header') }}</li>
             <!-- Optionally, you can add icons to the links -->
             <li><a href="{{ url('/admin/about') }}"><i class='fa fa-link'></i> <span>基本信息</span></a></li>
             <li><a href="{{ url('/admin/investor') }}"><i class='fa fa-link'></i> <span>投资页信息</span></a></li>
+            <li><a href="{{ url('/admin/dynamic') }}"><i class='fa fa-link'></i> <span>融资信息</span></a></li>
             <li ><a href="{{ url('/admin/project') }}"><i class='fa fa-link'></i> <span>孵化项目</span></a></li>
             <li><a href="{{ url('/admin/carousel') }}"><i class='fa fa-link'></i> <span>图片管理</span></a></li>
             <li><a href="{{ url('/admin/teacher') }}"><i class='fa fa-link'></i> <span>导师管理</span></a></li>
             <li><a href="{{ url('/admin/area') }}"><i class='fa fa-link'></i> <span>创业空间</span></a></li>
             <li><a href="{{ url('/admin/event') }}"><i class='fa fa-link'></i> <span>大事记</span></a></li>
+            <li><a href="{{ url('/admin/publicwelfare') }}"><i class='fa fa-link'></i> <span>公益活动</span></a></li>
+            <li><a href="{{ url('/admin/activity') }}"><i class='fa fa-link'></i> <span>创业活动</span></a></li>
             {{--<li class="treeview">--}}
                 {{--<a href="#"><i class='fa fa-link'></i> 信息管理</span> <i class="fa fa-angle-left pull-right"></i></a>--}}
                 {{--<ul class="treeview-menu">--}}

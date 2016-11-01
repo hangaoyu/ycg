@@ -54,7 +54,7 @@
 
 
                 <div class="modal-social">
-                    <img src="/images/login/qq.png" alt="">
+                    <a href="{{url('/qq')}}"> <img src="/images/login/qq.png" alt=""></a>
                     <img src="/images/login/wx.png" alt="">
                     <a href="{{url('/weibo')}}">  <img src="/images/login/wb.png" alt=""></a>
 
