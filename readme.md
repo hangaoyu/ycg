@@ -23,6 +23,7 @@
 
 ###前端预处理
  - gulpfile
+ - scss
 
 ###后台vue组件 
 - Carousel.vue 图片管理
