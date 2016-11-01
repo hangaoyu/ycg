@@ -1,6 +1,6 @@
 框架 laravel5.3 服务器配置php5.7.1
 
-- [ycg]: http://ycg.g91app.com/
+
 +###[网站链接](http://ycg.g91app.com/)
  ##前端
 -
