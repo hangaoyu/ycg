@@ -1,4 +1,4 @@
-框架 laravel5.3 服务器配置php5.7.1
+框架 laravel5.3 服务器配置php7.1
 
 
 [网站链接](http://ycg.g91app.com/)
